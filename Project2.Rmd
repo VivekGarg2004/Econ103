@@ -1,0 +1,183 @@
+---
+title: "Project2"
+author: "Vivek Garg"
+output: html_document
+date: "2024-11-19"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+##Description of Variables
+01	date			:	Date in MM-DD-YYYY
+02	day			:	Day of the Week
+03	quarter			:	A portion of the month. A month was divided into four quarters
+04	department		:	Associated department with the instance
+05	team			:	Associated team number with the instance
+06	no_of_workers		:	Number of workers in each team
+07	no_of_style_change	:	Number of changes in the style of a particular product
+08	targeted_productivity	:	Targeted productivity set by the Authority for each team for each day.
+09	smv			:	Standard Minute Value, it is the allocated time for a task
+10	wip			:	Work in progress. Includes the number of unfinished items for products
+11	over_time		:	Represents the amount of overtime by each team in minutes
+12	incentive		:	Represents the amount of financial incentive (in BDT) that enables or motivates a particular course of action.
+13	idle_time		:	The amount of time when the production was interrupted due to several reasons
+14	idle_men		:	The number of workers who were idle due to production interruption
+15	actual_productivity	:	The actual % of productivity that was delivered by the workers. It ranges from 0-1.
+
+source: https://archive.ics.uci.edu/dataset/597/productivity+prediction+of+garment+employees
+
+```{r libraries}
+library(tidyverse)
+library(ggplot2)
+library(tidyr)
+library(dplyr)
+if (!require(Boruta)) install.packages("Boruta")
+library(Boruta)
+```
+```{r helper functions}
+# i like using helper function because it makes my code more modular and thats how i write my CS programs
+
+#this is to calculate optimal number of bins for a histogram
+helper.calculate_bins_sturges <- function(data) {
+  n <- nrow(data)
+  bins <- ceiling(log2(n) + 1)
+  bins
+  return(bins)
+}
+
+
+# this is a helper that can plot either a one variable histogram or many variables from the same dataset through facet_wrap
+helper.plot_histograms <- function(data, color = "blue", bins = NULL, variable_name = NULL){
+  if(is.null(bins)){
+    bins <- helper.calculate_bins_sturges(data)
+  }
+  if (!is.null(variable_name)) { 
+    ggplot(data, aes_string(x = variable_name)) + 
+      geom_histogram(bins = bins, fill = color, alpha = 0.7) + 
+      theme_minimal() + 
+      labs(title = paste("Distribution of", variable_name)) 
+  } else { 
+    ggplot(data, aes(x = Value)) + 
+      geom_histogram(bins = bins, fill = color, alpha = 0.7) + 
+      facet_wrap(~ Variable, scales = "free") + 
+      theme_minimal() + 
+      labs(title = "Distribution of Predictors") 
+  }
+}
+helper.create_histograms <- function(data, exclude_var = NULL, bins=NULL) { 
+  numerical_data <- data %>% select_if(is.numeric)
+  if (!is.null(exclude_var)) { 
+    # ggplot prefers long data so we make it long 
+    long_data <- numerical_data %>%  # R pipe operator
+      select(-all_of(exclude_var)) %>% 
+      gather(key = "Variable", value = "Value")
+    helper.plot_histograms(long_data, bins = bins) } 
+  else { 
+    long_data <- numerical_data %>%
+      gather(key = "Variable", value = "Value") 
+    helper.plot_histograms(long_data, bins = bins) 
+  } 
+}
+
+#box plot basic helper using ggplot
+helper.create_boxplot <- function(data, x_var, y_var, fill_color = "blue", title_prefix = "Actual Productivity by") {
+  ggplot(data, aes_string(x = x_var, y = y_var)) +
+    geom_boxplot(fill = fill_color, alpha = 0.7) +
+    theme_minimal() +
+    labs(title = paste(title_prefix, x_var), x = x_var, y = y_var)
+}
+
+# helper function for summary for categorical/factor variables
+helper.group_summary <- function(data, group_var, target_var) {
+  data %>%
+    group_by(across(all_of(group_var))) %>%
+    summarise(
+      mean = mean(.data[[target_var]], na.rm = TRUE),
+      sd = sd(.data[[target_var]], na.rm = TRUE),
+      n = n()
+    ) %>%
+    arrange(desc(mean))
+}
+
+# helper function for anova for basic EDA of factor_variables
+helper.run_anova <- function(data, factor_var, target_var) {
+  formula <- as.formula(paste(target_var, "~", factor_var)) #s/o CS131
+  anova_result <- aov(formula, data = data)
+  summary(anova_result)
+}
+
+```
+
+```{r data_preprocessing, echo=TRUE}
+garment_worker <- read.csv("garments_worker_productivity.csv")
+# we have empty values in the wip column but basically they are empty whenever the department is finishing and then a numerical value when the department is sweing. Because of this I am comfortable filling in 0 for all places where wip is null for a finishing department because we assume it has no effect on the model and all of that potential effect is transferred to the department category variable. There is also a bug in the csv where sometimes the department is "finishing " with a space instead of just "finishing". 
+
+#this replaces "finishing " with "finishing"
+garment_worker <- garment_worker %>%
+  mutate(department = str_replace_all(department, "finishing ", "finishing"))
+garment_worker <- garment_worker %>%
+  mutate(department = str_replace_all(department, "sweing", "sewing"))
+
+#this replaces all wip values with 0 where department is finishing also sweing is misspelled so fixing that
+garment_worker <- garment_worker %>%
+  mutate(wip = ifelse(department == "finishing" & is.na(wip), 0, wip))
+
+# we also want to make sure that variables are being correctly attributed as factors instead of quantitative. Additionally for those categories that are graded as sparse we combine sparse categories. (this was done in "scratch work" i.e running stuff after this and coming back to fix this)
+garment_worker$team <- as.factor(garment_worker$team)
+garment_worker$no_of_style_change <- as.factor(garment_worker$no_of_style_change)
+
+if (sum(is.na(garment_worker)) > 0) {
+  print("missing values present in data")
+  #double checking no missing values in data
+}
+helper.create_histograms(garment_worker, "actual_productivity")
+helper.plot_histograms( data = garment_worker, color = "green", variable_name = "actual_productivity")
+```
+```{r Boruta}
+set.seed(123)
+boruta_result <- Boruta(actual_productivity ~ ., data = garment_worker, doTrace = 2)
+
+plot(boruta_result, xlab = "", main = "Variable Importance via Boruta")
+
+# Get the finalized list of important variables
+important_vars <- getSelectedAttributes(boruta_result, withTentative = TRUE)
+importance_scores <- attStats(boruta_result)
+print(importance_scores)
+
+# Extract importance scores for all predictors
+importance_scores <- attStats(boruta_result)
+
+# Sort predictors by mean importance
+sorted_scores <- importance_scores[order(-importance_scores$meanImp), ]
+
+# Select the top 5-6 Quantitative predictors
+top_5_vars <- rownames(sorted_scores)[1:5]
+
+
+```
+```{r EDA for factor variables}
+# R is pretty cool because it auto does one-hot encoding for factor variables so that saves us a little code
+
+# no_of_style change has a sparse value for 2 so as a result we will add a column that makes it a binary to have a more even distribution
+garment_worker <- garment_worker %>%
+  mutate(style_change_binary = ifelse(no_of_style_change == 0, "No Change", "Has Change"))
+
+#this is doing all of the EDA for our factor variables 
+helper.create_boxplot(garment_worker, "team", "actual_productivity", "blue")
+helper.group_summary(garment_worker, "team", "actual_productivity")
+helper.run_anova(garment_worker, "team", "actual_productivity")
+helper.create_boxplot(garment_worker, "department", "actual_productivity", "green")
+helper.group_summary(garment_worker, "department", "actual_productivity")
+helper.run_anova(garment_worker, "department", "actual_productivity")
+helper.create_boxplot(garment_worker, "quarter", "actual_productivity", "purple")
+helper.group_summary(garment_worker, "quarter", "actual_productivity")
+helper.run_anova(garment_worker, "quarter", "actual_productivity")
+helper.create_boxplot(garment_worker, "style_change_binary", "actual_productivity", "lightblue")
+helper.group_summary(garment_worker, "style_change_binary", "actual_productivity")
+helper.run_anova(garment_worker, "style_change_binary", "actual_productivity")
+
+
+```
+##Factor Variable analysis
+Unfortunately from the ANOVA tests it looks like all factor variables demonstrate importance and it appears that none of them differentiated themselves through the box plots or summaries. This then leads us to rely on our economic intuition and human input. *yes we could do a chi-square test but I do not think that it would lead to any different analysis, and also pretty sure that we were not taught this*. For further analysis I will rely on the results from the Boruta test along with the ANOVA test. I think that the three most important factor variables are team, quarter, and style_change_binary. I think the analysis that setting `garment_worker$wip` to 0 when `garment_worker$department` was finishing was shortsighted as it seems that `department` has very little impact on the actual productivity as demonstrated by the fact that the two means were very close to each other and had the highest p-value from the ANOVA tests. This is probably credible evidence that `wip` for finishing was probably close to the median from `wip` from the sweing. 
