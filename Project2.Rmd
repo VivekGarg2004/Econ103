@@ -34,9 +34,13 @@ library(tidyr)
 library(dplyr)
 if (!require(Boruta)) install.packages("Boruta")
 library(Boruta)
+library(ranger)
+if (!require(doParallel)) install.packages("doParallel")
+library(doParallel)
 ```
 ```{r helper functions}
 # i like using helper function because it makes my code more modular and thats how i write my CS programs
+
 
 #this is to calculate optimal number of bins for a histogram
 helper.calculate_bins_sturges <- function(data) {
@@ -48,37 +52,50 @@ helper.calculate_bins_sturges <- function(data) {
 
 
 # this is a helper that can plot either a one variable histogram or many variables from the same dataset through facet_wrap
-helper.plot_histograms <- function(data, color = "blue", bins = NULL, variable_name = NULL){
-  if(is.null(bins)){
+helper.plot_histograms <- function(data, color = "blue", bins = NULL, variable_name = NULL) {
+  if (is.null(bins)) {
     bins <- helper.calculate_bins_sturges(data)
   }
-  if (!is.null(variable_name)) { 
-    ggplot(data, aes_string(x = variable_name)) + 
+  if (!is.null(variable_name)) {
+    ggplot(data, aes(x = .data[[variable_name]])) + 
       geom_histogram(bins = bins, fill = color, alpha = 0.7) + 
       theme_minimal() + 
-      labs(title = paste("Distribution of", variable_name)) 
-  } else { 
+      labs(title = paste("Distribution of", variable_name))
+  } else {
+    #another debugging
+    if (!all(c("Variable", "Value") %in% names(data))) {
+      stop("Data must contain 'Variable' and 'Value' columns for multi-variable plotting.")
+    }
     ggplot(data, aes(x = Value)) + 
       geom_histogram(bins = bins, fill = color, alpha = 0.7) + 
       facet_wrap(~ Variable, scales = "free") + 
       theme_minimal() + 
-      labs(title = "Distribution of Predictors") 
+      labs(title = "Distribution of Predictors")
   }
 }
-helper.create_histograms <- function(data, exclude_var = NULL, bins=NULL) { 
+
+
+helper.create_histograms <- function(data, exclude_var = NULL, bins = NULL) { 
+  #idw filter for only numericals before so i do it here
   numerical_data <- data %>% select_if(is.numeric)
+  
   if (!is.null(exclude_var)) { 
-    # ggplot prefers long data so we make it long 
-    long_data <- numerical_data %>%  # R pipe operator
-      select(-all_of(exclude_var)) %>% 
-      gather(key = "Variable", value = "Value")
-    helper.plot_histograms(long_data, bins = bins) } 
-  else { 
-    long_data <- numerical_data %>%
-      gather(key = "Variable", value = "Value") 
-    helper.plot_histograms(long_data, bins = bins) 
-  } 
+    numerical_data <- numerical_data %>% select(-all_of(exclude_var))
+  }
+  
+  # ggplot likes long data who am i to complain
+  long_data <- numerical_data %>%
+    pivot_longer(cols = everything(), names_to = "Variable", values_to = "Value")
+  
+  # Debugging checks because R environment manager is really confusing to me
+  if (!all(c("Variable", "Value") %in% names(long_data))) {
+    stop("The long data is missing 'Variable' or 'Value' columns.")
+  }
+  
+  # Call helper.plot_histograms
+  helper.plot_histograms(long_data, bins = bins)
 }
+
 
 #box plot basic helper using ggplot
 helper.create_boxplot <- function(data, x_var, y_var, fill_color = "blue", title_prefix = "Actual Productivity by") {
@@ -107,13 +124,59 @@ helper.run_anova <- function(data, factor_var, target_var) {
   summary(anova_result)
 }
 
+helper.eda_factor <- function(data, factor_var, target_var, color){
+  #this gives the boxplot
+  print(helper.create_boxplot(data, factor_var, target_var, color))
+  
+  #now annova
+  print(helper.run_anova(data, factor_var, target_var))
+  
+  #finally summary
+  helper.group_summary(data, factor_var, target_var)
+}
+
+helper.density_plot <- function(data, variable_name, color) {
+  ggplot(data, aes(x = !!sym(variable_name))) +
+    geom_density(fill = color, alpha = 0.6) +
+    theme_minimal() +
+    labs(title = paste("Density Plot of", variable_name), 
+         x = variable_name, y = "Density")
+}
+
+helper.univariate_quantitative <- function(data, var) {
+  # summary Statistics
+  summary_stats <- summary(data[[var]])
+  print(summary_stats)
+  
+  # histogram
+  print(helper.plot_histograms(data = data, variable_name = var))
+  
+  # density plot with fitted curve
+  print(helper.density_plot(data, var, "green"))
+}
+
+helper.detect_nonlinearities <- function(data, target_var, var) {
+  # Scatter Plot with Smoothing
+  ggplot(data, aes_string(x = var, y = target_var)) +
+    geom_point(alpha = 0.5) +
+    geom_smooth(method = "loess", color = "red") +
+    theme_minimal() +
+    labs(title = paste("Scatter Plot of", target_var, "vs", var), x = var, y = target_var) %>%
+    print()
+}
+
+
 ```
+
+
+
+
 
 ```{r data_preprocessing, echo=TRUE}
 garment_worker <- read.csv("garments_worker_productivity.csv")
 # we have empty values in the wip column but basically they are empty whenever the department is finishing and then a numerical value when the department is sweing. Because of this I am comfortable filling in 0 for all places where wip is null for a finishing department because we assume it has no effect on the model and all of that potential effect is transferred to the department category variable. There is also a bug in the csv where sometimes the department is "finishing " with a space instead of just "finishing". 
 
-#this replaces "finishing " with "finishing"
+#this replaces "finishing " with "finishing" and sweing is misspelled so fixing that
 garment_worker <- garment_worker %>%
   mutate(department = str_replace_all(department, "finishing ", "finishing"))
 garment_worker <- garment_worker %>%
@@ -138,21 +201,26 @@ helper.plot_histograms( data = garment_worker, color = "green", variable_name = 
 set.seed(123)
 boruta_result <- Boruta(actual_productivity ~ ., data = garment_worker, doTrace = 2)
 
-plot(boruta_result, xlab = "", main = "Variable Importance via Boruta")
+plot(boruta_result, xlab = "", xaxt = "n", main = "Variable Importance via Boruta")
+lz<-lapply(1:ncol(boruta_result$ImpHistory),function(i)
+boruta_result$ImpHistory[is.finite(boruta_result$ImpHistory[,i]),i])
+names(lz) <- colnames(boruta_result$ImpHistory)
+Labels <- sort(sapply(lz,median))
+axis(side = 1,las=2,labels = names(Labels),
+at = 1:ncol(boruta_result$ImpHistory), cex.axis = 0.7)
+
 
 # Get the finalized list of important variables
 important_vars <- getSelectedAttributes(boruta_result, withTentative = TRUE)
 importance_scores <- attStats(boruta_result)
 print(importance_scores)
 
-# Extract importance scores for all predictors
-importance_scores <- attStats(boruta_result)
-
 # Sort predictors by mean importance
 sorted_scores <- importance_scores[order(-importance_scores$meanImp), ]
 
 # Select the top 5-6 Quantitative predictors
 top_5_vars <- rownames(sorted_scores)[1:5]
+
 
 
 ```
@@ -164,20 +232,176 @@ garment_worker <- garment_worker %>%
   mutate(style_change_binary = ifelse(no_of_style_change == 0, "No Change", "Has Change"))
 
 #this is doing all of the EDA for our factor variables 
-helper.create_boxplot(garment_worker, "team", "actual_productivity", "blue")
-helper.group_summary(garment_worker, "team", "actual_productivity")
-helper.run_anova(garment_worker, "team", "actual_productivity")
-helper.create_boxplot(garment_worker, "department", "actual_productivity", "green")
-helper.group_summary(garment_worker, "department", "actual_productivity")
-helper.run_anova(garment_worker, "department", "actual_productivity")
-helper.create_boxplot(garment_worker, "quarter", "actual_productivity", "purple")
-helper.group_summary(garment_worker, "quarter", "actual_productivity")
-helper.run_anova(garment_worker, "quarter", "actual_productivity")
-helper.create_boxplot(garment_worker, "style_change_binary", "actual_productivity", "lightblue")
-helper.group_summary(garment_worker, "style_change_binary", "actual_productivity")
-helper.run_anova(garment_worker, "style_change_binary", "actual_productivity")
+helper.eda_factor(garment_worker, "team", "actual_productivity", "blue")
+helper.eda_factor(garment_worker, "department", "actual_productivity", "green")
+helper.eda_factor(garment_worker, "quarter", "actual_productivity", "purple")
+helper.eda_factor(garment_worker, "style_change_binary", "actual_productivity", "lightblue")
+
 
 
 ```
 ##Factor Variable analysis
-Unfortunately from the ANOVA tests it looks like all factor variables demonstrate importance and it appears that none of them differentiated themselves through the box plots or summaries. This then leads us to rely on our economic intuition and human input. *yes we could do a chi-square test but I do not think that it would lead to any different analysis, and also pretty sure that we were not taught this*. For further analysis I will rely on the results from the Boruta test along with the ANOVA test. I think that the three most important factor variables are team, quarter, and style_change_binary. I think the analysis that setting `garment_worker$wip` to 0 when `garment_worker$department` was finishing was shortsighted as it seems that `department` has very little impact on the actual productivity as demonstrated by the fact that the two means were very close to each other and had the highest p-value from the ANOVA tests. This is probably credible evidence that `wip` for finishing was probably close to the median from `wip` from the sweing. 
+Unfortunately from the ANOVA tests it looks like all factor variables demonstrate importance and it appears that none of them differentiated themselves through the box plots or summaries. This then leads us to rely on our economic intuition and human input. *yes we could do a chi-square test but I do not think that it would lead to any different analysis, and also pretty sure that we were not taught this*. For further analysis I will rely on the results from the Boruta test along with the ANOVA test. I think that the three most important factor variables are team, quarter, and department. The first two spots were pretty well solidified as their results were very high in the Boruta test and they passed the ANOVA test. The last spot came down to `department` versus `style_change_binary`. At first I looked at the Boruta test between `department` and `no_of_style_change`, but these were largely equal. Then I moved onto the EDA of the factor variables. Although `style_change_binary` had a lower p-value from the ANOVA test and had a greater difference between means, I think the imbalance between categories was not ideal for me. Additionally, the department category carries an implicit weight from the `wip` category due to how we handled `NULL` values. Moreover the `incentive` column is 0 for all `department` finishing leading for me to believe that department is also carrying an implicit weight from this column. This was a tough decision and I do not think there is a wrong answer for this.
+
+```{r Univariate Analysis of Quantitative Variables}
+for (var in top_5_vars){
+  print(paste("Descriptive Analysis for",  var))
+  helper.univariate_quantitative(data = garment_worker, var = var)
+  print(helper.detect_nonlinearities(data = garment_worker, var = var, target_var = "actual_productivity"))
+}
+
+
+
+```
+
+
+
+
+
+##RideShare
+```{r, show_col_types = FALSE}
+rideshare_kaggle <- read_csv("rideshare_kaggle.csv")
+rideshare_kaggle <- na.omit(rideshare_kaggle)
+rideshare_kaggle$product_id <- NULL
+
+# we also want to make sure that variables are being correctly attributed as factors instead of quantitative. Additionally for those categories that are graded as sparse we combine sparse categories. (this was done in "scratch work" i.e running stuff after this and coming back to fix this)
+rideshare_kaggle$source <- as.factor(rideshare_kaggle$source)
+rideshare_kaggle$destination <- as.factor(rideshare_kaggle$destination)
+rideshare_kaggle$cab_type <- as.factor(rideshare_kaggle$cab_type)
+rideshare_kaggle$name <- as.factor(rideshare_kaggle$name)
+rideshare_kaggle$month <- as.factor(rideshare_kaggle$month)
+rideshare_kaggle$day <- as.factor(rideshare_kaggle$day)
+rideshare_kaggle$short_summary <- as.factor(rideshare_kaggle$short_summary)
+rideshare_kaggle$long_summary <- as.factor(rideshare_kaggle$long_summary)
+rideshare_kaggle$icon <- as.factor(rideshare_kaggle$icon)
+
+
+
+# helper.create_histograms(rideshare_kaggle, "price")
+helper.plot_histograms( data = rideshare_kaggle, color = "green", variable_name = "price")
+
+```
+
+
+```{r trying stuff}
+library(corrplot)
+
+# This dataset has a size of 637, 976 entries with  56 variables which is too much data to do an effective Boruta on as a result we will do pre-processing beforehand. The first thing is that we will remove all columns that are represented by unix timestamps as unix time stamps are not predictive in their nature as this is not a dataset which increases as time increases and instead is more likely to rely on whether what day of the week it is or what hour of the day it is which means we look at time through the lens of a categorical variable. Additionally there exists variables called temperature and apparentTemperature which have a correlation score of 0.9 on average when compared to one another as a result we will remove all columns titled just temperature* (regex syntax) and will keep all columns called apparentTemperature*. We will then remove the column called id as that is just a hash meaning it has no predictive values. Then we will remove timezone as all of the data is just from the same time zone. Additionally product_id is the same as name so as a result we will remove them. This is the same with short_summary, icon, and long_summary which are closely related values and as a result we wil only keep short summary in order to ensure that we have good detail while also an even split between columns. Additionally visibiliy.1 is the same as visibility so we will remove that as well. Additionally there is temperatureHigh vs temperatureMax which are again very closely correlated as a result we will be removing all of those columns as well. 
+
+rideshare_kaggle_2 <- read_csv("rideshare_kaggle.csv")
+# There exist ~5500 null values but in a dataset of 650k we will just omit these values
+rideshare_kaggle_2 <- na.omit(rideshare_kaggle_2)
+rideshare_kaggle_2$id <- NULL
+rideshare_kaggle_2$timestamp <- NULL
+rideshare_kaggle_2$timezone <- NULL
+rideshare_kaggle_2$product_id <- NULL
+rideshare_kaggle_2$temperature <- NULL
+rideshare_kaggle_2$long_summary <- NULL
+rideshare_kaggle_2$windGustTime <- NULL
+rideshare_kaggle_2$temperatureHighTime <- NULL
+rideshare_kaggle_2$temperatureHigh <- NULL
+rideshare_kaggle_2$temperatureLowTime <- NULL
+rideshare_kaggle_2$temperatureLow <- NULL
+rideshare_kaggle_2$apparentTemperatureHighTime <- NULL
+rideshare_kaggle_2$apparentTemperatureLowTime <- NULL
+rideshare_kaggle_2$icon <- NULL
+rideshare_kaggle_2$visibility.1 <- NULL
+rideshare_kaggle_2$sunriseTime <- NULL
+rideshare_kaggle_2$sunsetTime <- NULL
+rideshare_kaggle_2$uvIndexTime <- NULL
+rideshare_kaggle_2$temperatureMin <- NULL
+rideshare_kaggle_2$temperatureMinTime <- NULL
+rideshare_kaggle_2$temperatureMax <- NULL
+rideshare_kaggle_2$temperatureMaxTime <- NULL
+rideshare_kaggle_2$apparentTemperatureMin <- NULL
+rideshare_kaggle_2$apparentTemperatureMinTime <- NULL
+rideshare_kaggle_2$apparentTemperatureMax <- NULL
+rideshare_kaggle_2$apparentTemperatureMaxTime <- NULL
+rideshare_kaggle_2$source <- as.factor(rideshare_kaggle_2$source)
+rideshare_kaggle_2$destination <- as.factor(rideshare_kaggle_2$destination)
+rideshare_kaggle_2$cab_type <- as.factor(rideshare_kaggle_2$cab_type)
+rideshare_kaggle_2$name <- as.factor(rideshare_kaggle_2$name)
+rideshare_kaggle_2$month <- as.factor(rideshare_kaggle_2$month)
+rideshare_kaggle_2$day <- as.factor(rideshare_kaggle_2$day)
+rideshare_kaggle_2$short_summary <- as.factor(rideshare_kaggle_2$short_summary)
+colSums(is.na(rideshare_kaggle_2))
+
+correlation_test <- data.frame(lapply(rideshare_kaggle_2, function(x) {
+  if (is.factor(x)) as.numeric(x) else x
+}))
+correlation_test$datetime <- NULL
+
+cor_matrix <- cor(correlation_test, use = "complete.obs")
+
+strong_correlations <- which(abs(cor_matrix) > 0.7 & abs(cor_matrix) < 1, arr.ind = TRUE)
+strong_pairs <- data.frame(
+  Var1 = rownames(cor_matrix)[strong_correlations[, 1]],
+  Var2 = colnames(cor_matrix)[strong_correlations[, 2]],
+  Correlation = cor_matrix[strong_correlations]
+)
+print(strong_pairs)
+
+
+# Plot the correlation matrix this is unviewable due to the 31 variables but it still somewhat useful to see
+corrplot(cor_matrix, method = "color", type = "upper", order = "hclust",
+         tl.col = "black", tl.srt = 45)
+
+
+```
+
+
+
+
+
+
+```{r Boruta for cleaned Data}
+set.seed(123)
+#we will use dplyr's slice_sample to get random 10,000 instances because this is more than enough instances to run Boruta on and I want results quicker
+sampled_data <- rideshare_kaggle_2 %>% slice_sample(n =10000)
+# for some reason R is single threaded for BORUTA so we will set up threading manually because i am not waiting 6 hrs for boruta analysis 
+cl <- makeCluster(detectCores() - 1) # Use all but one core
+registerDoParallel(cl)
+
+#this is the actual BORUTA
+boruta_result <- Boruta(price ~ ., data = sampled_data, doTrace = 2)
+
+#stop cluster 
+stopCluster(cl)
+registerDoSEQ()
+
+plot(boruta_result, xlab = "", xaxt = "n", main = "Variable Importance via Boruta")
+lz <- lapply(1:ncol(boruta_result$ImpHistory), function(i)
+  boruta_result$ImpHistory[is.finite(boruta_result$ImpHistory[, i]), i])
+names(lz) <- colnames(boruta_result$ImpHistory)
+Labels <- sort(sapply(lz, median))
+axis(side = 1, las = 2, labels = names(Labels),
+     at = 1:ncol(boruta_result$ImpHistory), cex.axis = 0.7)
+
+
+important_vars <- getSelectedAttributes(boruta_result, withTentative = TRUE)
+importance_scores <- attStats(boruta_result)
+
+
+sorted_scores <- importance_scores[order(-importance_scores$meanImp), ]
+print(sorted_scores)
+
+quantitative_vars <- names(sampled_data)[sapply(sampled_data, is.numeric)]
+top_quantitative_scores <- sorted_scores[rownames(sorted_scores) %in% quantitative_vars, ]
+top_5_vars <- rownames(top_quantitative_scores)[1:5]
+
+# Print results
+print("Top Quantitative Variables (Sorted by Mean Importance):")
+print(top_5_vars)
+
+```
+
+
+
+```{r top 5 analysis}
+for (var in top_5_vars){
+  print(paste("Descriptive Analysis for",  var))
+  helper.univariate_quantitative(data = rideshare_kaggle_2, var = var)
+  print(helper.detect_nonlinearities(data = rideshare_kaggle_2, var = var, target_var = "price"))
+}
+helper.univar
+```
