@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 options(repos = c(CRAN = "https://cloud.r-project.org"))
 ```
 # Introduction
-For this project I created my own dataset. I used the Yahoo Finance API and Python to scrape the S&P 500 company list, the Russell 2000, and the the S&P 400 to get a mix of small, mid, and large cap stocks. I then selected 1000 companies at random from this aggregated list. I then used the Yahoo API and Finnhub to get the financial data for the companies and put it into a CSV. Github Link to process: https://github.com/VivekGarg2004/Econ103
+For this project I created my own dataset. I used the Yahoo Finance API and Python to scrape the S&P 500 company list, the Russell 2000, and the the S&P 400 to get a mix of small, mid, and large cap stocks. I then selected 1000 companies at random from this aggregated list. I then used the Yahoo API and Finnhub to get the financial data for the companies and put it into a CSV. Github Link to process: https://github.com/VivekGarg2004/Econ103. (read the README.md for information or contact me at vivekgarg2004(at)gmail.com)
 
 
 The objective of this project is to develop a predictive model that estimates the Recent Close Price of stocks based on various market and financial variables. I hope to answer the following questions.
