@@ -141,14 +141,11 @@ def fetch_stock_data(selected_tickers):
                 "Sector": info.get("sector", "Unknown"),  # Categorical
                 "Industry": info.get("industry", "Unknown"),  # Categorical
                 "Region": "North America",  # Categorical (default)
-                "Market Cap": info.get("marketCap", 0),  # Quantitative
                 "Market Cap Classification": classify_market_cap(info.get("marketCap", 0)),  # Categorical
                 "Volatility Classification": classify_volatility(info.get("beta", None)),  # Categorical
                 "Growth vs Value": classify_growth_or_value(info.get("trailingPE", None)),  # Categorical
                 "P/E Ratio": info.get("trailingPE", None),  # Quantitative
                 "Dividend Yield (%)": info.get("dividendYield", 0) * 100,  # Quantitative
-                "52 Week High": info.get("fiftyTwoWeekHigh", None),  # Quantitative
-                "52 Week Low": info.get("fiftyTwoWeekLow", None),  # Quantitative
                 "Beta": info.get("beta", None),  # Quantitative
                 "Avg Volume": hist['Volume'].mean(),  # Quantitative
                 "Recent Close Price": recent_close_price,  # Quantitative
