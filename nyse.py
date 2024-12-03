@@ -6,7 +6,7 @@ import json
 import time
 import finnhub
 
-API_KEY = 'cppao79r01qn2da2cu00cppao79r01qn2da2cu0g'
+API_KEY = '' # sign up for a free API key
 finnhub_client = finnhub.Client(api_key=API_KEY)
 
 
