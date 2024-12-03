@@ -1,0 +1,424 @@
+---
+title: "Project2"
+author: "Vivek Garg"
+output: html_document
+date: "2024-11-19"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# Introduction
+For this project I created my own dataset. I used the Yahoo Finance API and Python to scrape the S&P 500 company list, the Russell 2000, and the the S&P 400 to get a mix of small, mid, and large cap stocks. I then selected 1000 companies at random from this aggregated list. I then used the Yahoo API to get the financial data for the companies and put it into a CSV. Github Link to process: 
+## Description of Variables
+Ticker: Identifier for the stock (not used as a predictor).
+Sector: Categorical variable indicating the sector.
+Industry: Categorical variable indicating the industry.
+Region: Categorical variable indicating the region.(not used as a predictor because "North America" for all)
+Market Cap: Quantitative variable representing the market capitalization.
+Market Cap Classification: Categorical variable indicating the market cap classification.
+Volatility Classification: Categorical variable indicating the volatility classification.
+Growth vs Value: Categorical variable indicating growth or value classification.
+P/E Ratio: Quantitative variable representing the price-to-earnings ratio.
+Dividend Yield (%): Quantitative variable representing the dividend yield.
+52 Week High: Quantitative variable representing the 52-week high price.
+52 Week Low: Quantitative variable representing the 52-week low price.
+Beta: Quantitative variable representing the stock's volatility relative to the market.
+Avg Volume: Quantitative variable representing the average trading volume.
+Avg Close Price: Quantitative variable representing the average closing price.
+## R Libraries and Helper Functions
+```{r libraries}
+library(tidyverse)
+library(ggplot2)
+library(tidyr)
+library(dplyr)
+if (!require(Boruta)) install.packages("Boruta")
+library(Boruta)
+library(ranger)
+if (!require(doParallel)) install.packages("doParallel")
+library(doParallel)
+```
+```{r helper functions}
+# i like using helper function because it makes my code more modular and thats how i write my CS programs
+
+
+#this is to calculate optimal number of bins for a histogram
+helper.calculate_bins_sturges <- function(data) {
+  n <- nrow(data)
+  bins <- ceiling(log2(n) + 1)
+  bins
+  return(bins)
+}
+
+
+# this is a helper that can plot either a one variable histogram or many variables from the same dataset through facet_wrap
+helper.plot_histograms <- function(data, color = "blue", bins = NULL, variable_name = NULL) {
+  if (is.null(bins)) {
+    bins <- helper.calculate_bins_sturges(data)
+  }
+  if (!is.null(variable_name)) {
+    ggplot(data, aes(x = .data[[variable_name]])) + 
+      geom_histogram(bins = bins, fill = color, alpha = 0.7) + 
+      theme_minimal() + 
+      labs(title = paste("Distribution of", variable_name))
+  } else {
+    #another debugging
+    if (!all(c("Variable", "Value") %in% names(data))) {
+      stop("Data must contain 'Variable' and 'Value' columns for multi-variable plotting.")
+    }
+    ggplot(data, aes(x = Value)) + 
+      geom_histogram(bins = bins, fill = color, alpha = 0.7) + 
+      facet_wrap(~ Variable, scales = "free") + 
+      theme_minimal() + 
+      labs(title = "Distribution of Predictors")
+  }
+}
+
+
+helper.create_histograms <- function(data, exclude_var = NULL, bins = NULL) { 
+  #idw filter for only numericals before so i do it here
+  numerical_data <- data %>% select_if(is.numeric)
+  
+  if (!is.null(exclude_var)) { 
+    numerical_data <- numerical_data[, !names(numerical_data) %in% exclude_var]
+  }
+  
+  # ggplot likes long data who am i to complain
+  long_data <- numerical_data %>%
+    pivot_longer(cols = everything(), names_to = "Variable", values_to = "Value")
+  
+  # Debugging checks because R environment manager is really confusing to me
+  if (!all(c("Variable", "Value") %in% names(long_data))) {
+    stop("The long data is missing 'Variable' or 'Value' columns.")
+  }
+  
+  # Call helper.plot_histograms
+  helper.plot_histograms(long_data, bins = bins)
+}
+
+
+#box plot basic helper using ggplot
+helper.create_boxplot <- function(data, x_var, y_var, fill_color = "blue", title_prefix = "Actual Productivity by") {
+  ggplot(data, aes_string(x = x_var, y = y_var)) +
+    geom_boxplot(fill = fill_color, alpha = 0.7) +
+    theme_minimal() +
+    labs(title = paste(title_prefix, x_var), x = x_var, y = y_var)
+}
+
+# helper function for summary for categorical/factor variables
+helper.group_summary <- function(data, group_var, target_var) {
+  data %>%
+    group_by(across(all_of(group_var))) %>%
+    summarise(
+      mean = mean(.data[[target_var]], na.rm = TRUE),
+      sd = sd(.data[[target_var]], na.rm = TRUE),
+      n = n()
+    ) %>%
+    arrange(desc(mean))
+}
+
+# helper function for anova for basic EDA of factor_variables
+helper.run_anova <- function(data, factor_var, target_var) {
+  formula <- as.formula(paste(target_var, "~", factor_var)) #s/o CS131
+  anova_result <- aov(formula, data = data)
+  summary(anova_result)
+}
+
+helper.eda_factor <- function(data, factor_var, target_var, color){
+  #this gives the boxplot
+  print(helper.create_boxplot(data, factor_var, target_var, color))
+  
+  #now annova
+  print(helper.run_anova(data, factor_var, target_var))
+  
+  #finally summary
+  helper.group_summary(data, factor_var, target_var)
+}
+
+helper.density_plot <- function(data, variable_name, color) {
+  ggplot(data, aes(x = !!sym(variable_name))) +
+    geom_density(fill = color, alpha = 0.6) +
+    theme_minimal() +
+    labs(title = paste("Density Plot of", variable_name), 
+         x = variable_name, y = "Density")
+}
+
+helper.detect_nonlinearities <- function(data, target_var, var, sample_size = 10000, noise_level = 0.05, noise_level_bool = TRUE) {
+  if (nrow(data) > sample_size) {
+    data <- data %>% sample_n(sample_size)
+  }
+
+  # Add noise to the target variable
+  if (noise_level_bool){
+    data[[target_var]] <- data[[target_var]] + rnorm(nrow(data), mean = 0, sd = sd(data[[target_var]]) * 
+                                                       noise_level)
+  }
+
+  # Fit linear regression model
+  model <- lm(as.formula(paste(target_var, "~", var)), data = data)
+
+  # Calculate R-squared
+  r_squared <- summary(model)$r.squared
+
+  ggplot(data, aes_string(x = var, y = target_var)) +
+    geom_point(alpha = 0.5, position = position_jitter(width = 0.1, height = 0)) +  # Add jitter for separation
+    geom_smooth(method = "lm", color = "red") +
+    labs(title = paste("Scatter Plot of", target_var, "vs", var, "\nR-squared:", round(r_squared, 4)),
+         x = var, y = target_var) +
+    theme_minimal()
+}
+
+helper.descriptive_analysis <- function(data, var) {
+  # Check if the variable exists and is numeric
+  if (!var %in% colnames(data) || !is.numeric(data[[var]])) {
+    stop("Please provide a valid numeric variable from the dataset.")
+  }
+  
+  # Histogram
+  ggplot(data, aes_string(x = var)) +
+    geom_histogram(bins = 30, fill = "blue", alpha = 0.7) +
+    theme_minimal() +
+    labs(title = paste("Histogram of", var), x = var, y = "Frequency") %>%
+    print()
+  
+  # Quantile Plot
+  ggplot(data, aes(sample = .data[[var]])) +
+    stat_qq() +
+    stat_qq_line(color = "red") +
+    theme_minimal() +
+    labs(title = paste("Quantile Plot of", var), x = "Theoretical Quantiles", y = "Sample Quantiles") %>%
+    print()
+}
+
+helper.density_plot <- function(data, var) {
+  # Check if the variable exists and is numeric
+  if (!var %in% colnames(data) || !is.numeric(data[[var]])) {
+    stop("Please provide a valid numeric variable from the dataset.")
+  }
+  
+  # Density Plot
+  ggplot(data, aes_string(x = var)) +
+    geom_density(fill = "blue", alpha = 0.5) +
+    theme_minimal() +
+    labs(title = paste("Density Plot of", var), x = var, y = "Density") %>%
+    print()
+}
+
+helper.detect_nonlinearity <- function(data, target_var, var) {
+  
+  # Check if the variables exist and are numeric
+  if (!all(c(target_var, var) %in% colnames(data)) || 
+      !all(sapply(data[c(target_var, var)], is.numeric))) {
+    stop("Please provide valid numeric variables from the dataset.")
+  }
+  
+  # Apply power transformation
+  power_transform <- powerTransform(data[[var]] ~ data[[target_var]])
+  summary_result <- summary(power_transform)
+  lambda <- summary_result$roundlam[1]
+  
+  if (is.na(lambda)) {
+    stop("lambda is missing")
+  }
+  
+  if (lambda < 0.9 || lambda > 1.1) {
+    message(paste(var, "is non-linear. Suggested lambda:", lambda))
+  } else {
+    message(paste(var, "is approximately linear."))
+  }
+  
+  return(lambda)
+}
+
+helper.detect_outliers <- function(data, target_var, var) {
+  # Check if the variables exist and are numeric
+  if (!all(c(target_var, var) %in% colnames(data)) || 
+      !all(sapply(data[c(target_var, var)], is.numeric))) {
+    stop("Please provide valid numeric variables from the dataset.")
+  }
+  
+  # Fit a linear model
+  model <- lm(as.formula(paste(target_var, "~", var)), data = data)
+  
+  # Calculate standardized residuals and Cook's distance
+  residuals_data <- augment(model)
+  
+  # Identify potential outliers
+  residuals_data <- residuals_data %>%
+    mutate(outlier = ifelse(abs(.std.resid) > 2, TRUE, FALSE),
+           influential = ifelse(.cooksd > (4 / nrow(data)), TRUE, FALSE))
+  
+  # Visualize outliers
+  ggplot(residuals_data, aes(.fitted, .std.resid)) +
+    geom_point(aes(color = outlier), alpha = 0.5) +
+    geom_hline(yintercept = c(-2, 2), linetype = "dashed", color = "red") +
+    theme_minimal() +
+    labs(title = paste("Standardized Residuals vs Fitted Values for", var),
+         x = "Fitted Values", y = "Standardized Residuals") %>%
+    print()
+  
+  # Return outliers and influential points
+  return(list(outliers = residuals_data %>% filter(outlier == TRUE),
+              influential = residuals_data %>% filter(influential == TRUE)))
+}
+
+
+```
+
+## Data Preprocessing and Set-up
+```{r data preprocessing}
+stock_data <- read.csv("stock_dataset.csv")
+
+# Mean imputation for P/E Ratio
+pe_mean <- mean(stock_data$P.E_Ratio, na.rm = TRUE)
+stock_data$P.E_Ratio[is.na(stock_data$P.E_Ratio)] <- pe_mean
+
+# Mean imputation for Beta
+beta_mean <- mean(stock_data$Beta, na.rm = TRUE)
+stock_data$Beta[is.na(stock_data$Beta)] <- beta_mean
+
+if (sum(is.na(stock_data)) > 0) {
+  print("missing values present in data")
+  #double checking no missing values in data
+}
+helper.create_histograms(stock_data, "Avg_Close_Price")
+helper.plot_histograms( data = stock_data, color = "green", variable_name = "Avg_Close_Price")
+```
+# 1 Variable Selection
+### Boruta Algorithm Selection
+```{r Boruta Selection}
+set.seed(123)
+# for some reason R is single threaded for BORUTA so we will set up threading manually because i am not waiting for boruta analysis 
+cl <- makeCluster(detectCores() - 1) # Use all but one core
+registerDoParallel(cl)
+
+boruta_result_stock <- Boruta(Avg_Close_Price ~ ., data = stock_data, doTrace = 2)
+
+#stop cluster 
+stopCluster(cl)
+registerDoSEQ()
+
+plot(boruta_result_stock, xlab = "", xaxt = "n", main = "Variable Importance via Boruta")
+lz_stock <- lapply(1:ncol(boruta_result_stock$ImpHistory), function(i)
+  boruta_result_stock$ImpHistory[is.finite(boruta_result_stock$ImpHistory[, i]), i])
+names(lz_stock) <- colnames(boruta_result_stock$ImpHistory)
+Labels_stock <- sort(sapply(lz_stock, median))
+axis(side = 1, las = 2, labels = names(Labels_stock),
+     at = 1:ncol(boruta_result_stock$ImpHistory), cex.axis = 0.7)
+
+
+important_vars_stock <- getSelectedAttributes(boruta_result_stock, withTentative = TRUE)
+importance_scores_stock <- attStats(boruta_result_stock)
+
+
+sorted_scores_stock <- importance_scores_stock[order(-importance_scores_stock$meanImp), ]
+print(sorted_scores_stock)
+
+quantitative_vars <- names(stock_data)[sapply(stock_data, is.numeric)]
+top_quantitative_scores <- sorted_scores_stock[rownames(sorted_scores_stock) %in% quantitative_vars, ]
+top_5_vars_stock <- rownames(top_quantitative_scores)[1:5]
+print(top_5_vars_stock)
+```
+
+### Factor Variable Selection
+```{r EDA for factor variables}
+# R is pretty cool because it auto does one-hot encoding for factor variables so that saves us a little code
+
+
+#this is doing all of the EDA for our factor variables 
+helper.eda_factor(stock_data, "Sector", "Avg_Close_Price", "blue")
+helper.eda_factor(stock_data, "Industry", "Avg_Close_Price", "green")
+helper.eda_factor(stock_data, "Market_Cap_Classification", "Avg_Close_Price", "purple")
+helper.eda_factor(stock_data, "Volatility_Classification", "Avg_Close_Price", "lightblue")
+helper.eda_factor(stock_data, "Growth_vs_Value", "Avg_Close_Price", "lightblue")
+
+
+
+```
+
+```{r Descriptive Analysis for X52_Week_High}
+helper.descriptive_analysis(stock_data, var = "X52_Week_High")
+helper.density_plot(stock_data, var = "X52_Week_High")
+lambda <- helper.detect_nonlinearity(stock_data, target_var = "Avg_Close_Price", var = "X52_Week_High")
+#print(paste("Suggested lambda for", var, ":", lambda))
+outliers <- helper.detect_outliers(stock_data, target_var = "your_target_variable", var = "X52_Week_High")
+print(outliers$outliers)      # Rows with significant outliers
+print(outliers$influential)   # Rows with influential points
+
+colnames(stock_data)
+p1<-powerTransform(P.E_Ratio ~ 1, data=stock_data)
+summary(p1)
+
+
+
+```
+
+
+```{r tryn}
+helper.detect_nonlinearities <- function(data, target_var, predictors, z_threshold = 3, cook_threshold = 0.85) {
+  results <- list()
+  
+  for (var in predictors) {
+    if (!is.numeric(data[[var]])) next
+    
+    # Compute z-scores for both variables
+    z_scores_x <- scale(data[[var]])
+    z_scores_y <- scale(data[[target_var]])
+    
+    # Initial filtering based on z-scores
+    filtered_idx <- abs(z_scores_x) < z_threshold & abs(z_scores_y) < z_threshold
+    
+    # Fit model and compute Cook's distance
+    model <- lm(as.formula(paste(target_var, "~", var)), data = data)
+    cooks_d <- cooks.distance(model)
+    
+    # Further filter based on Cook's distance
+    influential <- cooks_d > cook_threshold * mean(cooks_d, na.rm = TRUE)
+    final_idx <- filtered_idx & !influential
+    
+    filtered_data <- data[final_idx, ]
+    
+    # Create plots
+    p1 <- ggplot(data, aes_string(x = var, y = target_var)) +
+      geom_point(aes(color = influential), alpha = 0.5) +
+      geom_smooth(method = "loess", color = "red") +
+      geom_smooth(method = "lm", color = "blue", linetype = "dashed") +
+      scale_color_manual(values = c("black", "red")) +
+      theme_minimal() +
+      labs(title = paste("Original Data with Influential Points:", target_var, "vs", var))
+    
+    p2 <- ggplot(filtered_data, aes_string(x = var, y = target_var)) +
+      geom_point(alpha = 0.5) +
+      geom_smooth(method = "loess", color = "red") +
+      geom_smooth(method = "lm", color = "blue", linetype = "dashed") +
+      theme_minimal() +
+      labs(title = paste("Filtered Data:", target_var, "vs", var))
+    
+    gridExtra::grid.arrange(p1, p2, ncol = 2)
+    
+    # Store results
+    results[[var]] <- list(
+      correlation_original = cor(data[[target_var]], data[[var]], use = "complete.obs"),
+      correlation_filtered = cor(filtered_data[[target_var]], filtered_data[[var]], use = "complete.obs"),
+      n_influential = sum(influential),
+      n_outliers = sum(!final_idx)
+    )
+    
+    # Print summary
+    cat("\nAnalysis for", var, ":\n")
+    cat("Number of influential points:", results[[var]]$n_influential, "\n")
+    cat("Total points removed:", results[[var]]$n_outliers, "\n")
+    cat("Original correlation:", round(results[[var]]$correlation_original, 3), "\n")
+    cat("Filtered correlation:", round(results[[var]]$correlation_filtered, 3), "\n\n")
+  }
+  
+  return(results)
+}
+
+# Example usage:
+dependent_var <- "Avg_Close_Price"
+predictor_vars <- c("Market_Cap","Avg_Volume")
+# Adjust thresholds as needed
+results <- helper.detect_nonlinearities(stock_data, dependent_var, predictor_vars, 
+                                      z_threshold = 3, cook_threshold = 0.85)
+```

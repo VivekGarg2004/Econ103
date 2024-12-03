@@ -1,0 +1,702 @@
+Ticker,Sector,Industry,Region,Market_Cap,Market_Cap_Classification,Volatility_Classification,Growth_vs_Value,P/E_Ratio,Dividend_Yield_percent,52_Week_High,52_Week_Low,Beta,Avg_Volume,Avg_Close_Price
+DLR,Real Estate,REIT - Specialty,North America,66026000384,Mid Cap,Low Volatility,Growth,159.09756,2.4899999999999998,198.0,130.0,0.609,1897076.892430279,148.26501385814166
+VOYA,Financial Services,Financial Conglomerates,North America,7986127360,Small Cap,High Volatility,Value,13.153725,2.17,84.3,63.11,1.03,795424.3027888446,72.08395771771313
+TRV,Financial Services,Insurance - Property & Casualty,North America,60536872960,Mid Cap,Low Volatility,Value,13.6641,1.5800001000000001,269.56,180.44,0.63,1312178.486055777,218.24794529158757
+CSV,Consumer Cyclical,Personal Services,North America,617296704,Small Cap,Low Volatility,Value,18.183855,1.11,40.89,22.84,0.907,105961.75298804781,28.358785484891488
+ARDX,Healthcare,Biotechnology,North America,1347702272,Small Cap,Low Volatility,Unknown,,0.0,10.13,4.341,0.914,5058471.71314741,6.785796807581685
+EXPO,Industrials,Engineering & Construction,North America,5010963968,Small Cap,Low Volatility,Growth,47.917477,1.13,115.75,68.7,0.695,246075.69721115538,93.65637352932022
+LMNR,Consumer Defensive,Farm Products,North America,501842816,Small Cap,Low Volatility,Growth,89.677414,1.08,29.22,17.37,0.471,51007.96812749004,21.472871894380486
+RL,Consumer Cyclical,Apparel Manufacturing,North America,13827445760,Mid Cap,High Volatility,Growth,22.080153,1.43,237.16,127.68,1.504,851756.5737051793,172.64525279010908
+TR,Consumer Defensive,Confectioners,North America,2342129408,Small Cap,Low Volatility,Growth,25.267176,1.09,34.796116,27.58,0.178,146739.73705179282,30.747577887607285
+CNL,Basic Materials,Gold,North America,276601632,Small Cap,Low Volatility,Unknown,,0.0,4.04,2.43,0.87,6938.709677419355,3.279924738791681
+CCOI,Communication Services,Telecom Services,North America,4047939840,Small Cap,Low Volatility,Growth,119.115944,4.84,86.76,50.8,0.38,430045.01992031874,67.60944746405005
+WASH,Financial Services,Banks - Regional,North America,636861824,Small Cap,Low Volatility,Value,13.910111,6.0300004,40.59,24.11,0.796,98144.22310756972,28.5234463224373
+CVBF,Financial Services,Banks - Regional,North America,3328520960,Small Cap,Low Volatility,Value,16.492958,3.42,24.58,15.71,0.438,849798.8047808765,17.776131918705794
+DBX,Technology,Software - Infrastructure,North America,8440974336,Small Cap,Low Volatility,Value,15.988439,0.0,33.43,20.68,0.607,3562484.860557769,25.416454178403573
+CDP,Real Estate,REIT - Office,North America,3769216512,Small Cap,High Volatility,Growth,27.231405,3.58,34.22,22.2,1.005,889135.8565737052,26.168876571959235
+NEE,Utilities,Utilities - Regulated Electric,North America,161776992256,Large Cap,Low Volatility,Growth,23.344213,2.6199998,86.1,53.95,0.561,10946941.832669323,69.3248794829228
+MCO,Financial Services,Financial Data & Stock Exchanges,North America,90774863872,Mid Cap,High Volatility,Growth,45.660275,0.6799999999999999,503.95,360.05,1.289,739825.8964143427,421.6597536854535
+ETR,Utilities,Utilities - Regulated Electric,North America,33533446144,Mid Cap,Low Volatility,Value,18.9757,3.0700000000000003,158.07,96.15,0.701,1606829.8804780876,111.86163779938839
+GEF,Consumer Cyclical,Packaging & Containers,North America,3433341440,Small Cap,Low Volatility,Value,15.441304,3.04,73.16,55.95,0.925,170973.70517928287,62.5762482297373
+TTEK,Industrials,Engineering & Construction,North America,11113927680,Mid Cap,Low Volatility,Growth,33.747967,0.53,51.2,31.608,0.939,1488804.780876494,40.47111552265061
+CTBI,Financial Services,Banks - Regional,North America,1065054912,Small Cap,Low Volatility,Value,13.404545,3.19,61.67,38.44,0.65,50235.458167330675,44.60652940301781
+WTI,Energy,Oil & Gas E&P,North America,285874528,Small Cap,High Volatility,Unknown,,2.0599999,3.44,1.9,1.399,2163846.613545817,2.4431029012003744
+ATRO,Industrials,Aerospace & Defense,North America,479414368,Small Cap,High Volatility,Unknown,,0.0,23.74,14.13,1.835,177106.77290836655,18.640637443360106
+COLM,Consumer Cyclical,Apparel Manufacturing,North America,4989647872,Small Cap,Low Volatility,Growth,24.436975,1.38,88.62,73.04,0.925,451216.7330677291,79.81737664211319
+ALB,Basic Materials,Specialty Chemicals,North America,12692014080,Mid Cap,High Volatility,Unknown,,1.5,153.54,71.97,1.551,2955762.948207171,109.8233938939068
+PNW,Utilities,Utilities - Regulated Electric,North America,10746920960,Mid Cap,Low Volatility,Value,17.612782,3.82,95.42,65.2,0.518,1151980.079681275,77.26873396307349
+MDXG,Healthcare,Biotechnology,North America,1385705472,Small Cap,High Volatility,Value,16.228071,0.0,9.64,5.47,1.939,747520.717131474,7.284541842472031
+HAFC,Financial Services,Banks - Regional,North America,807753920,Small Cap,Low Volatility,Value,12.716347,3.7800000000000002,27.59,14.45,0.826,227535.45816733068,17.58322639389342
+PWOD,Financial Services,Banks - Regional,North America,243858928,Small Cap,Low Volatility,Value,12.227272,3.9699999999999998,32.28,17.01,0.456,26120.717131474103,21.238513840147224
+CFFN,Financial Services,Banks - Regional,North America,882287680,Small Cap,Low Volatility,Growth,23.034483,5.09,7.2,4.76,0.451,856849.8007968127,5.671887483254847
+SAM,Consumer Defensive,Beverages - Brewers,North America,3602542848,Small Cap,High Volatility,Growth,46.50588,0.0,371.65,254.4,1.06,149943.4262948207,303.0398405158662
+ALV,Consumer Cyclical,Auto Parts,North America,7805868544,Small Cap,High Volatility,Value,12.939948,2.8199999,129.38,89.51,1.602,693685.2589641435,106.32771088497572
+HOMB,Financial Services,Banks - Regional,North America,6313824768,Small Cap,High Volatility,Value,16.371134,2.4600001,32.91,22.38,1.041,1003627.0916334662,24.977437889433478
+BELFB,Technology,Electronic Components,North America,1026304000,Small Cap,High Volatility,Value,19.461166,0.34999999,85.91,45.75,1.279,92973.70517928287,66.58030878500159
+ISRL,Financial Services,Shell Companies,North America,144794816,Small Cap,Unknown,Growth,37.666664,0.0,11.3,10.64,,34905.57768924303,10.963366459090397
+AMPH,Healthcare,Drug Manufacturers - Specialty & Generic,North America,2172798464,Small Cap,Low Volatility,Value,15.0132885,0.0,65.92,36.56,0.824,403172.11155378487,47.078446209668165
+MUSA,Consumer Cyclical,Specialty Retail,North America,11205632000,Mid Cap,Low Volatility,Growth,22.627014,0.34999999,561.08,350.55,0.756,195428.68525896413,445.88460549890283
+CCI,Real Estate,REIT - Specialty,North America,46371643392,Mid Cap,Low Volatility,Growth,37.677307,5.89,120.92,92.48,0.875,2727831.474103586,104.59411891618097
+CBOE,Financial Services,Financial Data & Stock Exchanges,North America,22804768768,Mid Cap,Low Volatility,Growth,29.407356,1.17,221.66,166.13,0.666,841258.5657370518,189.35553811365864
+EMN,Basic Materials,Specialty Chemicals,North America,12138409984,Mid Cap,High Volatility,Value,14.037534,3.09,114.5,80.71,1.459,955334.2629482072,95.62327429782822
+MYE,Consumer Cyclical,Packaging & Containers,North America,432213696,Small Cap,High Volatility,Growth,27.61905,4.66,23.63,10.35,1.25,305081.6733067729,16.315813680094077
+COTY,Consumer Defensive,Household & Personal Products,North America,6445949440,Small Cap,High Volatility,Growth,41.055553,0.0,13.3,6.93,1.914,4276516.334661354,10.400756980318473
+ARW,Technology,Electronics & Computer Distribution,North America,6319262720,Small Cap,High Volatility,Value,13.380847,0.0,137.8,108.51,1.274,474947.41035856574,124.1347011854924
+TCBK,Financial Services,Banks - Regional,North America,1613303936,Small Cap,Low Volatility,Value,14.386906,2.73,51.06,31.73,0.549,115942.23107569721,39.431253714390486
+SBRA,Real Estate,REIT - Healthcare Facilities,North America,4473847808,Small Cap,High Volatility,Growth,45.682926,6.41,20.03,12.83,1.235,2048602.390438247,14.968806498554123
+OSIS,Technology,Electronic Components,North America,2964477952,Small Cap,High Volatility,Growth,23.098959,0.0,177.56,120.42,1.099,126233.06772908366,138.71996006452704
+OZK,Financial Services,Banks - Regional,North America,5668946944,Small Cap,High Volatility,Value,8.21875,3.2800000000000002,52.36,37.43,1.152,1272831.4741035856,43.48824526114293
+UMBF,Financial Services,Banks - Regional,North America,6151043072,Small Cap,Low Volatility,Value,15.666666,1.28,129.94,73.54,0.789,365640.2390438247,90.4953426345886
+CBRL,Consumer Cyclical,Restaurants,North America,1233670912,Small Cap,High Volatility,Growth,30.360655,1.7999999999999998,83.52,34.88,1.417,717594.422310757,54.72228417263563
+WSFS,Financial Services,Banks - Regional,North America,3559197952,Small Cap,High Volatility,Value,13.671983,1.0,62.75,39.99,1.017,280944.22310756973,47.25930801330809
+NYCB,Financial Services,Banks - Regional,North America,4380972032,Small Cap,Low Volatility,Unknown,,0.38,34.47,5.1,0.987,7735139.908366534,13.892669554250649
+HXL,Industrials,Aerospace & Defense,North America,5134723072,Small Cap,High Volatility,Growth,48.389313,0.95,77.09,57.5,1.298,831897.2111553785,66.22275889727224
+ALLE,Industrials,Security & Protection Services,North America,12292670464,Mid Cap,High Volatility,Growth,21.634407,1.3599999999999999,156.1,104.25,1.123,751572.5099601593,128.96805146965846
+VOXX,Technology,Consumer Electronics,North America,170814064,Small Cap,High Volatility,Unknown,,0.0,11.74,2.27,1.225,786234.6613545817,6.534940242767334
+WMB,Energy,Oil & Gas Midstream,North America,71336468480,Mid Cap,High Volatility,Growth,24.796612,3.25,60.36,32.65,1.062,6340596.812749004,41.2248088183156
+TTMI,Technology,Electronic Components,North America,2486004224,Small Cap,High Volatility,Growth,36.939392,0.0,25.49,13.43,1.221,744572.1115537848,17.707250959844703
+FARM,Consumer Defensive,Packaged Foods,North America,48066220,Small Cap,High Volatility,Unknown,,0.0,4.04,1.67,1.779,74089.64143426294,2.8557768960398033
+CRL,Healthcare,Diagnostics & Research,North America,10206264320,Mid Cap,High Volatility,Growth,24.8825,0.0,275.0,176.48,1.376,607296.015936255,218.6896016398274
+NVEE,Industrials,Engineering & Construction,North America,1415903616,Small Cap,High Volatility,Growth,40.296295,0.0,28.7525,21.4,1.177,342406.7729083665,24.29056270948919
+PII,Consumer Cyclical,Recreational Vehicles,North America,3848150784,Small Cap,High Volatility,Value,19.327732,3.83,100.91,64.56,1.522,747587.6494023905,83.14056177633218
+AXDX,Healthcare,Medical Devices,North America,41572708,Small Cap,Low Volatility,Unknown,,0.0,5.23,0.73,0.598,78516.73306772909,1.6882470124271287
+USFD,Consumer Defensive,Food Distribution,North America,16270781440,Mid Cap,High Volatility,Growth,29.944206,0.0,70.8,43.24,1.661,1795857.3705179284,53.95689230991075
+WMK,Consumer Defensive,Grocery Stores,North America,1959010560,Small Cap,Low Volatility,Growth,20.457867,1.87,76.62,58.87,0.468,87447.01195219124,64.64918929932126
+PNC,Financial Services,Banks - Regional,North America,85308473344,Mid Cap,High Volatility,Value,18.150465,2.98,216.26,136.4,1.121,1907875.298804781,162.6726588518971
+UEC,Energy,Uranium,North America,3418784256,Small Cap,High Volatility,Unknown,,0.0,8.77,4.06,1.832,7747325.896414342,6.637808765548159
+ACTG,Industrials,Business Equipment & Supplies,North America,443025344,Small Cap,Low Volatility,Value,7.844828,0.0,5.74,3.65,0.526,260204.3824701195,4.665298802919122
+ESAB,Industrials,Metal Fabrication,North America,7802640896,Small Cap,High Volatility,Growth,29.006742,0.25,135.97,78.34,1.321,257522.70916334662,100.82306528281406
+MATX,Industrials,Marine Shipping,North America,5087122944,Small Cap,High Volatility,Value,12.883094,0.89,169.12,94.58,1.06,289929.08366533864,122.83842282846155
+PGC,Financial Services,Banks - Regional,North America,640632064,Small Cap,Low Volatility,Value,19.857141,0.5499999999999999,37.88,20.3,0.961,96872.11155378487,26.31497484944256
+SPWH,Consumer Cyclical,Specialty Retail,North America,82887984,Small Cap,Low Volatility,Unknown,,0.0,5.405,1.81,0.657,473499.6015936255,3.1002191271914903
+GERN,Healthcare,Biotechnology,North America,2520768256,Small Cap,Low Volatility,Unknown,,0.0,5.34,1.64,0.515,10050955.378486056,3.554462152648257
+PRI,Financial Services,Insurance - Life,North America,10153902080,Mid Cap,High Volatility,Value,15.175438,1.1900000000000002,307.91,184.76,1.083,151980.4780876494,242.4391408973481
+KEYS,Technology,Scientific & Technical Instruments,North America,29485787136,Mid Cap,Low Volatility,Growth,48.811428,0.0,175.39,119.72,0.981,1248290.8366533865,149.62035862288153
+AGEN,Healthcare,Biotechnology,North America,82405584,Small Cap,High Volatility,Unknown,,0.0,19.69,2.5,1.386,652145.358565737,10.093466147008645
+EXPE,Consumer Cyclical,Travel Services,North America,23733823488,Mid Cap,High Volatility,Growth,23.976624,0.0,190.4,107.25,1.785,2131419.920318725,139.3876096565885
+CMC,Basic Materials,Steel,North America,7034140160,Small Cap,High Volatility,Value,14.900967,1.17,63.41,44.93,1.135,864219.123505976,53.69091424524072
+AMSWA,Technology,Software - Application,North America,388512576,Small Cap,Low Volatility,Growth,40.555553,4.0900003,12.2699,8.41,0.75,209762.81673306774,10.39420171182944
+HD,Consumer Cyclical,Home Improvement Retail,North America,426281861120,Large Cap,High Volatility,Growth,29.152853,2.1,439.37,318.96,1.011,3455296.015936255,359.27157398239075
+DAN,Consumer Cyclical,Auto Parts,North America,1467190016,Small Cap,High Volatility,Unknown,,4.0,15.07,7.58,2.304,1415694.8207171315,11.720725374867717
+GEHC,Healthcare,Health Information Services,North America,38020972544,Mid Cap,Unknown,Growth,22.8,0.16999999999999998,94.55,67.0,,3012123.505976096,82.84377428639932
+WD,Financial Services,Mortgage Finance,North America,3742010368,Small Cap,High Volatility,Growth,39.350002,2.3599999,118.19,87.2,1.539,204644.22310756973,99.47193106237161
+HSII,Industrials,Staffing & Employment Services,North America,941685120,Small Cap,Low Volatility,Growth,25.213114,1.2999999,49.02,26.52,0.844,149020.7171314741,33.88827690945204
+OMI,Healthcare,Medical Distribution,North America,1038658240,Small Cap,Low Volatility,Unknown,,0.0,28.35,11.42,0.409,828162.1513944223,18.3635856468839
+EXLS,Technology,Information Technology Services,North America,7495531008,Small Cap,Low Volatility,Growth,40.666668,0.0,47.37,28.16,0.992,948680.876494024,33.607171381612226
+CVEO,Consumer Cyclical,Lodging,North America,322008064,Small Cap,High Volatility,Value,16.699999,4.279999999999999,28.92,21.44,2.062,52687.25099601594,24.36004628033277
+AXP,Financial Services,Credit Services,North America,214630301696,Large Cap,High Volatility,Growth,22.419426,0.9199999999999999,307.82,165.93,1.214,2925722.310756972,233.23969186729644
+HLNE,Financial Services,Asset Management,North America,10644471808,Mid Cap,High Volatility,Growth,41.64502,1.0199999,203.72,97.94,1.193,307419.5219123506,133.09902458646857
+SGMO,Healthcare,Biotechnology,North America,479888384,Small Cap,Unknown,Unknown,,0.0,3.18,0.3,,6447710.3585657375,0.8163745029276586
+AVD,Basic Materials,Agricultural Inputs,North America,173590448,Small Cap,Low Volatility,Unknown,,2.0,14.28,4.95,0.881,263674.1035856574,8.805910009786903
+PPBI,Financial Services,Banks - Regional,North America,2770737920,Small Cap,High Volatility,Unknown,,4.65,30.28,20.52,1.183,549301.9920318725,24.062312441518106
+CLFD,Technology,Communication Equipment,North America,437231168,Small Cap,High Volatility,Unknown,,0.0,44.83,24.78,1.356,179309.56175298805,33.78139449495718
+BXP,Real Estate,REIT - Office,North America,14614306816,Mid Cap,High Volatility,Growth,35.647827,4.78,90.11,56.46,1.195,1301474.9003984064,67.62147968793771
+NR,Energy,Oil & Gas Equipment & Services,North America,723117376,Small Cap,High Volatility,Growth,22.0,0.0,8.65,5.61,2.88,697541.4342629482,7.270876500711023
+SNOW,Technology,Software - Application,North America,57696411648,Mid Cap,Low Volatility,Unknown,,0.0,237.72,107.13,0.828,6664374.103585658,152.7740634143115
+LVS,Consumer Cyclical,Resorts & Casinos,North America,38469877760,Mid Cap,High Volatility,Growth,26.267328,1.50999995,55.66,36.62,1.117,5708266.135458168,46.78271150019064
+IVZ,Financial Services,Asset Management,North America,8130369536,Small Cap,High Volatility,Unknown,,4.5300003,18.94,14.16,1.424,4258685.657370518,15.891671473286541
+PSA,Real Estate,REIT - Industrial,North America,61526188032,Mid Cap,Low Volatility,Growth,36.10477,3.45,369.99,256.31,0.69,733196.015936255,298.35426330566406
+ATRC,Healthcare,Medical Instruments & Supplies,North America,1763403904,Small Cap,High Volatility,Unknown,,0.0,39.05,18.94,1.408,696483.266932271,28.529442205847023
+NSA,Real Estate,REIT - Industrial,North America,6675024896,Small Cap,High Volatility,Growth,25.919538,5.06,49.44,34.49,1.014,720854.1832669323,39.78444496853893
+KIM,Real Estate,REIT - Retail,North America,17377806336,Mid Cap,High Volatility,Growth,47.35185,3.9100002000000003,25.83,17.57,1.485,4790427.49003984,20.661834549618906
+COHR,Technology,Scientific & Technical Instruments,North America,15491146752,Mid Cap,High Volatility,Unknown,,0.0,111.66,37.5,1.654,2296363.74501992,67.79980079681275
+CB,Financial Services,Insurance - Property & Casualty,North America,117035548672,Large Cap,Low Volatility,Value,11.833198,1.26,302.05,216.91,0.681,1636872.908366534,259.73175930311953
+ABNB,Consumer Cyclical,Travel Services,North America,86393380864,Mid Cap,High Volatility,Growth,47.096886,0.0,170.1,110.38,1.156,4576350.597609562,142.47348587826428
+KO,Consumer Defensive,Beverages - Non-Alcoholic,North America,277551644672,Large Cap,Low Volatility,Growth,26.58921,3.0299999,73.53,57.47,0.62,13719457.768924303,62.485729688667206
+GWW,Industrials,Industrial Distribution,North America,58726092800,Mid Cap,High Volatility,Growth,32.682755,0.6799999999999999,1227.66,794.0,1.151,233209.16334661355,963.5484332202441
+ADTN,Technology,Communication Equipment,North America,674100160,Small Cap,High Volatility,Unknown,,6.77,9.05,4.34,1.2,840637.0517928287,5.954422301030254
+MUR,Energy,Oil & Gas E&P,North America,4744289280,Small Cap,High Volatility,Value,10.4405155,3.6999999999999997,49.14,30.99,2.203,1649231.4741035856,38.669362102371764
+BRBR,Consumer Defensive,Packaged Foods,North America,10104236032,Mid Cap,Low Volatility,Growth,42.182796,0.0,79.9,48.06,0.895,1198666.1354581674,58.42577685777884
+AIN,Consumer Cyclical,Textile Manufacturing,North America,2594769920,Small Cap,High Volatility,Growth,25.90625,1.25,99.41,67.39,1.294,169166.93227091632,86.9131976427785
+NKTR,Healthcare,Biotechnology,North America,210282112,Small Cap,Low Volatility,Unknown,,0.0,1.93,0.46,0.61,1724617.9282868525,1.1035856551145653
+ACIW,Technology,Software - Infrastructure,North America,5959793152,Small Cap,High Volatility,Growth,26.928911,0.0,59.71,26.87,1.194,663376.4940239044,39.27338642713083
+NWE,Utilities,Utilities - Regulated Electric,North America,3386996480,Small Cap,Low Volatility,Value,14.889488,4.71,57.49,46.15,0.489,352731.07569721114,50.699486037174545
+BUSE,Financial Services,Banks - Regional,North America,1531731072,Small Cap,Low Volatility,Value,13.68718,3.5999999999999996,28.97,21.68,0.832,223780.8764940239,23.981425501910813
+BEBE,Industrials,Rental & Leasing Services,North America,15963884,Small Cap,Low Volatility,Growth,62.0,12.94,5.5,0.91,0.179,7052.191235059761,1.070457205354455
+MCRI,Consumer Cyclical,Resorts & Casinos,North America,1544868352,Small Cap,High Volatility,Value,18.545254,1.43,86.68,62.93,1.759,116651.79282868525,71.05367417354508
+CDNS,Technology,Software - Application,North America,84146634752,Mid Cap,High Volatility,Growth,80.73947,0.0,328.99,241.29,1.02,1737683.266932271,286.61984046236927
+PEN,Healthcare,Medical Devices,North America,9370277888,Small Cap,Low Volatility,Growth,277.4091,0.0,277.34,148.0,0.514,374408.764940239,215.22661295735028
+GVA,Industrials,Engineering & Construction,North America,4343720960,Small Cap,High Volatility,Growth,42.105934,0.52,100.57,43.92,1.402,518876.4940239044,63.79180628559979
+SFL,Industrials,Marine Shipping,North America,1409080448,Small Cap,Low Volatility,Value,10.52,10.27,14.62,10.01,0.722,839377.6892430279,11.854818275725224
+THC,Healthcare,Medical Care Facilities,North America,13568439296,Mid Cap,High Volatility,Value,4.5180492,0.0,171.2,67.78,2.15,1210783.266932271,123.20155352710253
+DK,Energy,Oil & Gas Refining & Marketing,North America,1235819136,Small Cap,High Volatility,Unknown,,5.35,33.6,15.36,1.144,1064662.1513944224,23.40177053474335
+KIRK,Consumer Cyclical,Home Improvement Retail,North America,23481040,Small Cap,High Volatility,Unknown,,0.0,3.54,1.39,2.417,152894.42231075699,2.166932266071973
+KMPR,Financial Services,Insurance - Property & Casualty,North America,4578612736,Small Cap,Low Volatility,Value,17.02143,1.73,73.01,44.48,0.843,383769.32270916336,58.706022908488116
+WAL,Financial Services,Banks - Regional,North America,10303558656,Mid Cap,High Volatility,Value,14.468316,1.6199999999999999,98.1,53.22,1.435,1310574.9003984064,68.91585036197982
+LITE,Technology,Communication Equipment,North America,5974839296,Small Cap,Low Volatility,Unknown,,0.0,91.21,38.285,0.881,1460385.2589641435,53.88808770958646
+ESPR,Healthcare,Drug Manufacturers - Specialty & Generic,North America,551697984,Small Cap,Low Volatility,Unknown,,0.0,3.4,1.35,0.954,6152809.163346614,2.2267330609469775
+JBT,Industrials,Specialty Industrial Machinery,North America,4012804352,Small Cap,High Volatility,Growth,28.192394,0.32,127.31,82.64,1.226,279118.3266932271,98.47743872532331
+CNS,Financial Services,Asset Management,North America,5291379712,Small Cap,High Volatility,Growth,39.05224,2.25,110.67,60.26,1.501,221037.0517928287,78.34040233718447
+B,Industrials,Specialty Industrial Machinery,North America,2387050752,Small Cap,High Volatility,Unknown,,1.37,47.4,26.95,1.344,428764.54183266935,37.97557671231578
+LADR,Real Estate,REIT - Mortgage,North America,1518886400,Small Cap,High Volatility,Value,15.605263,7.76,12.48,10.1,1.985,636566.9322709163,10.927804149004567
+CNSL,Communication Services,Telecom Services,North America,553245568,Small Cap,Low Volatility,Unknown,,0.0,4.72,4.18,0.986,543922.3107569721,4.447131489377573
+SRNE,Healthcare,Biotechnology,North America,992305,Small Cap,High Volatility,Unknown,,0.0,0.2495,0.0001,1.835,799809.5657370518,0.021721753043127692
+WBA,Healthcare,Pharmaceutical Retailers,North America,7833428480,Small Cap,Low Volatility,Unknown,,11.09,27.05,8.08,0.669,17224878.0876494,14.856898019038349
+DINO,Energy,Oil & Gas Refining & Marketing,North America,7710475264,Small Cap,High Volatility,Growth,23.65896,4.8899997,64.16,38.25,1.162,2030633.8645418326,50.489019143153946
+HTH,Financial Services,Banks - Regional,North America,2065782784,Small Cap,High Volatility,Value,19.417177,2.15,35.66,28.58,1.137,316915.1394422311,31.230406916948905
+NEM,Basic Materials,Gold,North America,47860244480,Mid Cap,Low Volatility,Unknown,,2.3800000000000003,58.72,29.42,0.531,10663353.386454184,42.27331427463972
+IDA,Utilities,Utilities - Regulated Electric,North America,6325255680,Small Cap,Low Volatility,Growth,21.81768,2.9000001,120.42,86.43,0.598,344979.2828685259,96.080717079193
+CGNX,Technology,Scientific & Technical Instruments,North America,6879478272,Small Cap,High Volatility,Growth,78.39216,0.8,53.13,34.79,1.402,1260631.87250996,41.26737156902176
+ADPT,Healthcare,Biotechnology,North America,876619328,Small Cap,High Volatility,Unknown,,0.0,6.7,2.28,1.447,1428603.984063745,4.11125498463908
+CHTR,Communication Services,Telecom Services,North America,56442068992,Mid Cap,High Volatility,Value,12.436247,0.0,415.27,236.08,1.036,1351296.015936255,323.911195124288
+ZEUS,Basic Materials,Steel,North America,471016096,Small Cap,High Volatility,Value,18.54386,1.4199998999999999,73.49,32.23,1.473,118160.95617529881,52.58867848916832
+NPK,Industrials,Aerospace & Defense,North America,566039936,Small Cap,Low Volatility,Value,16.747898,1.25,86.08,69.58,0.623,37705.57768924303,76.0893160147496
+GOGO,Communication Services,Telecom Services,North America,1023841024,Small Cap,High Volatility,Value,18.674417,0.0,11.17,6.17,1.103,994811.5537848605,8.701673300617719
+MLAB,Technology,Scientific & Technical Instruments,North America,642809280,Small Cap,Low Volatility,Unknown,,0.5499999999999999,141.17,83.68,0.865,43491.235059760955,109.08500899356675
+PHX,Energy,Oil & Gas E&P,North America,142801840,Small Cap,Low Volatility,Growth,29.307693,4.2,3.88,2.95,0.546,57974.10358565737,3.2273519390607737
+INGR,Consumer Defensive,Packaged Foods,North America,9600320512,Small Cap,Low Volatility,Value,14.374634,2.17,155.44,104.52,0.733,381068.12749003986,119.9942642759042
+TLYS,Consumer Cyclical,Apparel Retail,North America,126939504,Small Cap,High Volatility,Unknown,,0.0,8.09,3.57,1.633,87703.18725099602,5.879083674267469
+ASH,Basic Materials,Specialty Chemicals,North America,3689131008,Small Cap,Low Volatility,Value,19.762024,2.08,102.5,75.04,0.882,425011.95219123503,88.88777972217575
+NVT,Industrials,Electrical Equipment & Parts,North America,12906740736,Mid Cap,High Volatility,Growth,22.830902,0.97,86.57,53.49,1.25,1532645.8167330676,69.56049837819134
+GME,Consumer Cyclical,Specialty Retail,North America,13792678912,Mid Cap,Low Volatility,Growth,207.5,0.0,64.83,9.95,-0.098,18354637.05179283,19.730756961017015
+MU,Technology,Semiconductors,North America,109399367680,Large Cap,High Volatility,Growth,139.92857,0.47000000000000003,157.54,72.93,1.179,20993277.290836655,104.33621662641427
+FOXA,Communication Services,Entertainment,North America,20780531712,Mid Cap,Low Volatility,Value,11.5207815,1.15,47.585,28.285,0.77,3143184.462151394,35.087629842568205
+PRGS,Technology,Software - Infrastructure,North America,2935131136,Small Cap,Low Volatility,Growth,36.77957,1.0199999,70.56,48.0,0.92,479067.33067729085,56.142765577095915
+CC,Basic Materials,Specialty Chemicals,North America,3260130304,Small Cap,High Volatility,Growth,43.48,4.6,32.7,15.1,1.745,1545610.358565737,23.769249532327233
+NNN,Real Estate,REIT - Retail,North America,8326161408,Small Cap,High Volatility,Growth,20.36111,5.2800003,49.57,38.88,1.088,1215334.262948207,42.33832200494896
+JAZZ,Healthcare,Biotechnology,North America,7414156800,Small Cap,Low Volatility,Value,17.22238,0.0,134.17,99.06,0.573,670911.952191235,114.76776885986328
+PRAA,Financial Services,Credit Services,North America,846490560,Small Cap,High Volatility,Value,19.272728,0.0,31.43,18.64,1.501,219671.31474103587,22.90302792583329
+PLTR,Technology,Software - Infrastructure,North America,150463119360,Large Cap,High Volatility,Growth,335.4,0.0,67.88,15.664,2.697,58435744.62151395,28.65745017822995
+EVER,Communication Services,Internet Content & Information,North America,677334080,Small Cap,High Volatility,Growth,53.305553,0.0,28.09,9.86,1.055,459597.609561753,18.886633527231407
+BDX,Healthcare,Medical Instruments & Supplies,North America,64179245056,Mid Cap,Low Volatility,Growth,37.866894,1.7500000000000002,249.89,218.75,0.45,1448546.6135458166,234.67277490380275
+AWK,Utilities,Utilities - Regulated Water,North America,26955816960,Mid Cap,Low Volatility,Growth,27.170635,2.23,150.68,113.34,0.698,1183894.0239043825,130.35622241867492
+EQIX,Real Estate,REIT - Specialty,North America,94701240320,Mid Cap,Low Volatility,Growth,88.50135,1.7399999999999998,994.03,684.14,0.701,525569.7211155378,813.320395420272
+CPRI,Consumer Cyclical,Luxury Goods,North America,2772867584,Small Cap,High Volatility,Unknown,,0.0,51.23,18.7,2.049,2052876.09561753,38.64808771809734
+VICR,Technology,Electronic Components,North America,2406523392,Small Cap,High Volatility,Growth,532.1,0.0,61.05,30.9,1.487,231219.9203187251,39.23239055192803
+CHRS,Healthcare,Biotechnology,North America,145169024,Small Cap,Low Volatility,Unknown,,0.0,3.7,0.66,0.693,3202381.673306773,1.7922868467422122
+MMSI,Healthcare,Medical Instruments & Supplies,North America,6055229952,Small Cap,Low Volatility,Growth,50.68293,0.0,106.87,65.46,0.892,467439.8406374502,84.54517926827845
+FRT,Real Estate,REIT - Retail,North America,10059698176,Mid Cap,High Volatility,Growth,33.909885,3.7699999999999996,118.34,95.98,1.258,622253.7848605578,104.12197511224633
+RELY,Technology,Software - Infrastructure,North America,4125610496,Small Cap,Low Volatility,Unknown,,0.0,22.08,11.6,0.026,1738019.123505976,16.386713164736076
+NCMI,Communication Services,Advertising Agencies,North America,659659968,Small Cap,High Volatility,Unknown,,0.0,7.39,3.64,2.066,586700.0,5.294223113838895
+FORM,Technology,Semiconductor Equipment & Materials,North America,3102671104,Small Cap,High Volatility,Growth,23.15607,0.0,63.63,36.11,1.12,587315.5378486055,46.37697219848633
+UDR,Real Estate,REIT - Residential,North America,17404329984,Mid Cap,Low Volatility,Growth,120.68421,3.7100002,47.55,33.99,0.847,2522547.410358566,39.308245381511064
+MEI,Technology,Electronic Components,North America,384876480,Small Cap,Low Volatility,Unknown,,5.13,25.34,8.54,0.756,520549.80079681275,13.527681434296992
+VHI,Basic Materials,Chemicals,North America,739909120,Small Cap,High Volatility,Value,8.28479,1.25,41.75,12.12,1.29,16542.23107569721,20.349621050861252
+ODFL,Industrials,Trucking,North America,48066940928,Mid Cap,Low Volatility,Growth,39.36014,0.45999999999999996,233.26,165.49,0.989,1530847.4103585656,198.52130139111523
+ARMK,Industrials,Specialty Business Services,North America,10761161728,Mid Cap,High Volatility,Growth,41.10101,1.0299999,42.49,26.58,1.681,2282713.545816733,33.18856303150435
+CUB,Unknown,Unknown,North America,308200352,Small Cap,Unknown,Unknown,,0.0,10.55,9.96,,86387.17948717948,10.01242314852201
+KHC,Consumer Defensive,Packaged Foods,North America,38657167360,Mid Cap,Low Volatility,Growth,28.801802,5.0,38.96,30.4,0.475,7984806.772908366,34.169740053762006
+NGS,Energy,Oil & Gas Equipment & Services,North America,346278240,Small Cap,High Volatility,Growth,21.6875,0.0,28.5,12.75,1.029,66903.58565737052,19.455577709760323
+ONTO,Technology,Semiconductor Equipment & Materials,North America,8109063168,Small Cap,High Volatility,Growth,44.49322,0.0,238.93,134.11,1.37,572142.2310756972,188.6149002622323
+IDT,Communication Services,Telecom Services,North America,1303806720,Small Cap,Low Volatility,Growth,20.33071,0.38999999999999996,52.55,27.09,0.774,87342.23107569721,38.16750742239781
+TTWO,Communication Services,Electronic Gaming & Multimedia,North America,33084616704,Mid Cap,Low Volatility,Unknown,,0.0,190.43,135.24,0.85,1685524.3027888446,155.79147393579976
+WTRG,Utilities,Utilities - Regulated Water,North America,11061329920,Mid Cap,Low Volatility,Growth,20.115578,3.25,41.78,33.57,0.836,1526786.0557768925,37.10708721510443
+VRTS,Financial Services,Asset Management,North America,1733353984,Small Cap,High Volatility,Value,15.013373,3.64,263.39,190.42,1.444,42951.394422310754,221.05636353511736
+DLX,Industrials,Conglomerates,North America,1030214656,Small Cap,High Volatility,Value,18.685484,5.1799998,24.87,18.26,1.452,235162.1513944223,19.99388277578164
+EA,Communication Services,Electronic Gaming & Multimedia,North America,42926219264,Mid Cap,Low Volatility,Growth,41.966663,0.45999999999999996,168.5,124.92,0.781,2028606.374501992,140.0949800346952
+SF,Financial Services,Capital Markets,North America,11901577216,Mid Cap,High Volatility,Growth,20.902527,1.45000005,119.12,62.79,1.081,568995.219123506,82.62237904461257
+XOM,Energy,Oil & Gas Integrated,North America,518444810240,Large Cap,Low Volatility,Value,14.689913,3.36,126.34,95.77,0.88,16762449.800796812,110.70074575355804
+FDX,Industrials,Integrated Freight & Logistics,North America,74125393920,Mid Cap,High Volatility,Value,18.694874,1.82,313.84,234.45,1.177,1921455.7768924304,267.2467841646111
+ANF,Consumer Cyclical,Apparel Retail,North America,7540035072,Small Cap,High Volatility,Value,14.820792,0.0,196.99,75.69,1.512,1671236.2549800796,134.39239039934014
+AMD,Technology,Semiconductors,North America,222608965632,Large Cap,High Volatility,Growth,122.477684,0.0,227.3,116.37,1.706,55277277.290836655,158.25143435656787
+CAC,Financial Services,Banks - Regional,North America,693581696,Small Cap,Low Volatility,Value,14.721875,3.5700000000000003,50.07,28.62,0.713,50764.541832669325,35.51240641377362
+POST,Consumer Defensive,Packaged Foods,North America,7042454016,Small Cap,Low Volatility,Growth,21.361704,0.0,121.07,85.17,0.596,543039.4422310757,105.35717122963226
+UPS,Industrials,Integrated Freight & Logistics,North America,115785179136,Large Cap,Low Volatility,Growth,20.50151,4.8,163.82,123.12,0.982,4104184.06374502,137.80428052803435
+WINA,Consumer Cyclical,Specialty Retail,North America,1450140672,Small Cap,Low Volatility,Growth,37.72207,0.8699999999999999,451.3,330.25,0.78,26175.697211155377,365.89506050505014
+ADUS,Healthcare,Medical Care Facilities,North America,2227469824,Small Cap,High Volatility,Growth,28.10984,0.0,136.12,85.94,1.044,128360.1593625498,110.94302781549582
+PBH,Healthcare,Drug Manufacturers - Specialty & Generic,North America,4188104192,Small Cap,Low Volatility,Growth,20.67561,0.0,86.36,57.95,0.471,251094.8207171315,69.11239044979749
+LPG,Energy,Oil & Gas Midstream,North America,1047426112,Small Cap,High Volatility,Value,4.168654,16.350001,51.659,23.92,1.124,766881.2749003984,35.833178060463226
+UTI,Consumer Defensive,Education & Training Services,North America,1401393408,Small Cap,High Volatility,Growth,34.493336,0.0,26.43,10.46,1.346,510080.0796812749,15.748725100817433
+C,Financial Services,Banks - Diversified,North America,134033604608,Large Cap,High Volatility,Growth,20.190884,3.08,71.19,46.41,1.426,14804083.266932271,58.833556566580356
+AGX,Industrials,Engineering & Construction,North America,2105127680,Small Cap,Low Volatility,Growth,48.73125,0.9599999499999999,165.33,39.74,0.471,169961.7529880478,74.15850950142301
+FDS,Financial Services,Financial Data & Stock Exchanges,North America,18639964160,Mid Cap,Low Volatility,Growth,35.325413,0.8500000000000001,499.87,391.84,0.752,265147.01195219124,442.7064951862472
+UMH,Real Estate,REIT - Residential,North America,1519610880,Small Cap,High Volatility,Growth,147.69232,4.4799999999999995,20.64,14.09,1.288,414232.27091633464,16.3982182878897
+PRGO,Healthcare,Drug Manufacturers - Specialty & Generic,North America,3934581504,Small Cap,Low Volatility,Unknown,,3.8699999999999997,34.6,23.89,0.484,1662013.9442231075,28.50547761651149
+ATSG,Industrials,Airlines,North America,1446059392,Small Cap,Low Volatility,Unknown,,0.0,22.27,11.62,0.809,664937.8486055777,15.245896400208492
+BH,Consumer Cyclical,Restaurants,North America,667138816,Small Cap,High Volatility,Value,5.937641,0.0,219.0,145.95,1.361,2823.5059760956174,181.0333865952207
+FUL,Basic Materials,Specialty Chemicals,North America,4200277760,Small Cap,High Volatility,Growth,23.804953,1.16,87.67,72.6,1.416,301471.31474103587,78.3594799269718
+CPS,Consumer Cyclical,Auto Parts,North America,267521152,Small Cap,High Volatility,Unknown,,0.0,20.82,11.24,2.746,141192.43027888445,14.902828680091645
+RGEN,Healthcare,Medical Instruments & Supplies,North America,8434258944,Small Cap,Low Volatility,Unknown,,0.0,211.13,113.5,0.959,660435.8565737052,159.98952183210517
+FBNC,Financial Services,Banks - Regional,North America,1978625152,Small Cap,High Volatility,Value,19.07258,1.8599999999999999,50.34,29.53,1.036,169041.8326693227,36.59381687118713
+NWBO,Healthcare,Biotechnology,North America,363285984,Small Cap,Unknown,Unknown,,0.0,0.86,0.24,,1915980.876494024,0.4572111560528972
+GBX,Industrials,Railroads,North America,2135560448,Small Cap,High Volatility,Value,13.709678,1.76,68.9,38.12,1.479,315176.4940239044,49.71941219193052
+EXTR,Technology,Communication Equipment,North America,2193441024,Small Cap,High Volatility,Unknown,,0.0,18.77,10.5,1.77,1835706.374501992,13.84573699753598
+TBBK,Financial Services,Banks - Regional,North America,2830390016,Small Cap,High Volatility,Value,14.755051,0.0,61.17,29.92,1.462,617369.3227091633,42.80330665557983
+NEU,Basic Materials,Specialty Chemicals,North America,5181112832,Small Cap,Low Volatility,Value,11.8489895,1.87,650.0,494.04,0.512,36585.657370517925,556.2679998998148
+GDDY,Technology,Software - Infrastructure,North America,27776366592,Mid Cap,High Volatility,Value,15.843625,0.0,202.56,99.9,1.114,1467044.6215139441,137.01438271571917
+WSBF,Financial Services,Banks - Regional,North America,292340096,Small Cap,Low Volatility,Growth,20.958332,3.9800000000000004,16.86,10.6,0.642,46553.78486055777,13.141751536335128
+SHO,Real Estate,REIT - Hotel & Motel,North America,2159685632,Small Cap,High Volatility,Value,14.333333,3.35,11.59,9.39,1.249,2120493.625498008,10.317555024804347
+KNX,Industrials,Trucking,North America,9609967616,Small Cap,Low Volatility,Growth,258.08694,1.08,60.99,45.55,0.934,2051315.93625498,52.79552870062718
+KCLI,Financial Services,Insurance - Life,North America,350539456,Small Cap,Low Volatility,Value,6.1774745,1.55,39.01,29.0,0.587,841.8326693227092,35.54523170896735
+SRDX,Healthcare,Medical Devices,North America,566450752,Small Cap,High Volatility,Unknown,,0.0,42.44,25.17,1.202,217737.8486055777,36.063745042717315
+RYAM,Basic Materials,Chemicals,North America,580718208,Small Cap,High Volatility,Unknown,,0.0,10.28,3.15,3.011,531297.2111553785,5.795418349870173
+IRDM,Communication Services,Telecom Services,North America,3383562496,Small Cap,Low Volatility,Growth,31.956987,1.8800000000000001,41.66,24.14,0.645,1055739.043824701,29.946671603685356
+TAP,Consumer Defensive,Beverages - Brewers,North America,12615121920,Mid Cap,Low Volatility,Value,13.977478,2.8399997999999997,69.18,49.19,0.827,1879217.9282868525,57.65291119761676
+TBPH,Healthcare,Biotechnology,North America,463221504,Small Cap,Low Volatility,Unknown,,0.0,11.71,7.44,0.251,349632.27091633464,9.10209166196238
+KPTI,Healthcare,Biotechnology,North America,106830776,Small Cap,Low Volatility,Unknown,,0.0,1.95,0.617,0.154,1243627.888446215,0.9840996020818612
+CNXC,Technology,Information Technology Services,North America,2913600512,Small Cap,Low Volatility,Value,14.884107,2.96,106.1,36.28,0.674,576041.0358565737,66.37253483928058
+APOG,Industrials,Building Products & Equipment,North America,1847820032,Small Cap,Low Volatility,Value,17.765823,1.1900000000000002,87.93,46.25,0.97,148854.18326693226,62.6218760365034
+ICE,Financial Services,Financial Data & Stock Exchanges,North America,92551520256,Mid Cap,High Volatility,Growth,38.142185,1.1199999999999999,167.99,111.82,1.092,2605204.3824701197,141.82527604426045
+TTC,Industrials,Tools & Accessories,North America,8935714816,Small Cap,Low Volatility,Growth,22.855644,1.6500000000000001,102.0,77.15,0.694,870221.1155378486,88.33522468354123
+FN,Technology,Electronic Components,North America,8507724288,Small Cap,Low Volatility,Growth,27.79384,0.0,278.38,159.69,0.947,486156.17529880477,217.53374472082373
+ON,Technology,Semiconductors,North America,30282682368,Mid Cap,High Volatility,Value,17.647642,0.0,86.77,59.34,1.654,6607064.940239044,73.18613552382268
+FGEN,Healthcare,Biotechnology,North America,42797020,Small Cap,Low Volatility,Unknown,,0.0,2.93,0.18,0.726,2152963.346613546,0.9973864528049986
+RNG,Technology,Software - Application,North America,3441786880,Small Cap,Low Volatility,Unknown,,0.0,40.98,26.98,0.992,1243990.0398406375,32.894063782406995
+CWST,Industrials,Waste Management,North America,7108852224,Small Cap,Low Volatility,Growth,1029.1818,0.0,114.56,80.04,0.995,311494.0239043825,97.05470129978134
+TSN,Consumer Defensive,Farm Products,North America,22935490560,Mid Cap,Low Volatility,Growth,28.666666,3.1,66.88,47.92,0.775,2497560.15936255,56.89124813307804
+STRA,Consumer Defensive,Education & Training Services,North America,2446130432,Small Cap,Low Volatility,Value,18.820951,2.4300002000000003,123.62,85.11,0.576,128744.22310756972,99.45856098919751
+OIS,Energy,Oil & Gas Equipment & Services,North America,350897248,Small Cap,High Volatility,Unknown,,0.0,7.27,3.91,2.642,996504.3824701195,5.269920310176226
+SWK,Industrials,Tools & Accessories,North America,13839256576,Mid Cap,High Volatility,Unknown,,3.6700000000000004,110.88,77.7,1.255,1436922.310756972,91.30566005022877
+FYBR,Communication Services,Telecom Services,North America,8668213248,Small Cap,High Volatility,Unknown,,0.0,39.21,20.51,1.105,2197850.199203187,27.59846610567009
+GTLS,Industrials,Specialty Industrial Machinery,North America,8373851136,Small Cap,High Volatility,Growth,54.90057,0.0,196.91,101.6,1.712,662123.9043824701,139.29916348400343
+LNT,Utilities,Utilities - Regulated Electric,North America,16317166592,Mid Cap,Low Volatility,Growth,24.59144,3.04,64.19,46.8,0.574,1640001.593625498,52.54319050397531
+GIII,Consumer Cyclical,Apparel Manufacturing,North America,1300297728,Small Cap,High Volatility,Value,7.4447236,0.0,35.68,20.66,2.197,581969.7211155378,29.296254967313363
+SSD,Basic Materials,Lumber & Wood Production,North America,7943716352,Small Cap,High Volatility,Growth,24.953642,0.58999998,218.38,157.42,1.32,273223.5059760956,183.18945537430358
+OLLI,Consumer Defensive,Discount Stores,North America,6201711104,Small Cap,Low Volatility,Growth,30.167683,0.0,104.98,68.05,0.844,1044761.3545816733,84.89535853777274
+MANH,Technology,Software - Application,North America,17570144256,Mid Cap,High Volatility,Growth,81.32194,0.0,307.5,199.23,1.517,418289.2430278885,245.62083659988951
+CASS,Industrials,Specialty Business Services,North America,608849984,Small Cap,Low Volatility,Growth,26.708334,2.76,50.25,37.99,0.711,41765.73705179283,42.88920345534366
+PLPC,Industrials,Electrical Equipment & Parts,North America,667004032,Small Cap,Low Volatility,Growth,20.423424,0.58999998,145.28,109.01,0.624,14765.338645418327,126.30576555472446
+VSH,Technology,Semiconductors,North America,2575501568,Small Cap,High Volatility,Growth,30.806452,2.09,24.72,14.95,1.1,1297020.717131474,21.082821963792778
+EXC,Utilities,Utilities - Regulated Electric,North America,39751077888,Mid Cap,Low Volatility,Value,16.279835,3.8399997999999997,41.43,33.35,0.61,7042666.932270916,36.42717612217147
+RGLS,Healthcare,Biotechnology,North America,107420168,Small Cap,High Volatility,Unknown,,0.0,3.79,1.08,1.628,1116703.984063745,1.7663346581250072
+ARWR,Healthcare,Biotechnology,North America,3253958400,Small Cap,Low Volatility,Unknown,,0.0,39.83,17.05,0.934,1274399.203187251,25.776035924356773
+PAYX,Technology,Software - Application,North America,52642279424,Mid Cap,Low Volatility,Growth,31.121279,2.6800001,150.71,114.72,0.987,1813502.390438247,124.79379065768177
+WNC,Industrials,Farm & Heavy Construction Machinery,North America,859372736,Small Cap,High Volatility,Unknown,,1.6099999999999999,30.07,15.94,1.528,596795.219123506,22.469951591643678
+AJX,Real Estate,REIT - Mortgage,North America,138079232,Small Cap,High Volatility,Unknown,,9.21,6.01,2.92,1.846,139292.82868525895,3.6640987871177644
+INCY,Healthcare,Biotechnology,North America,14535428096,Mid Cap,Low Volatility,Growth,828.7777,0.0,83.95,50.35,0.71,2351324.302788845,62.0800796751957
+EVLV,Industrials,Security & Protection Services,North America,638077504,Small Cap,High Volatility,Unknown,,0.0,5.73,2.01,1.336,1705830.6772908366,3.701454180645278
+AFL,Financial Services,Insurance - Life,North America,63385825280,Mid Cap,Low Volatility,Value,16.93908,1.7500000000000002,115.5,75.08,0.958,2208896.4143426293,92.00467070925284
+TROX,Basic Materials,Chemicals,North America,1910892416,Small Cap,High Volatility,Unknown,,4.1300002000000005,20.7,10.69,1.647,1103065.3386454184,14.699853072603386
+HALO,Healthcare,Biotechnology,North America,6166708224,Small Cap,High Volatility,Value,15.960265,0.0,65.53,33.15,1.29,1348323.90438247,46.89458172254828
+ITRI,Technology,Scientific & Technical Instruments,North America,5378737152,Small Cap,High Volatility,Growth,24.33881,0.0,124.9,67.21,1.466,506947.80876494024,95.53147423124884
+MCD,Consumer Cyclical,Restaurants,North America,212126695424,Large Cap,Low Volatility,Growth,25.965792,2.39,317.9,243.53,0.735,3444482.470119522,279.5383629057987
+MNKD,Healthcare,Biotechnology,North America,1869774848,Small Cap,High Volatility,Growth,84.75001,0.0,7.63,3.17,1.296,2666750.597609562,5.010199220057028
+LEN,Consumer Cyclical,Residential Construction,North America,46908121088,Mid Cap,High Volatility,Value,11.587376,1.15,193.8,130.29,1.619,2058579.6812749004,161.8931438552431
+EMKR,Technology,Electronic Components,North America,27220110,Small Cap,High Volatility,Unknown,,0.0,7.2,0.78,1.574,478839.9203187251,2.6884063715003874
+STWD,Real Estate,REIT - Mortgage,North America,7041257472,Small Cap,High Volatility,Value,17.262712,9.43,22.29,18.43,1.737,2339713.545816733,19.146402374206787
+SPOK,Healthcare,Health Information Services,North America,333886048,Small Cap,Low Volatility,Growth,23.112677,7.62,18.14,13.24,0.304,139721.11553784861,14.812553565340687
+INN,Real Estate,REIT - Hotel & Motel,North America,713390400,Small Cap,High Volatility,Growth,131.59999,4.8600003,7.22,5.66,2.054,777114.7410358565,6.193312073133856
+MDLZ,Consumer Defensive,Confectioners,North America,86997917696,Mid Cap,Low Volatility,Growth,23.031914,2.8900001,77.2,63.4,0.561,6716774.103585658,69.49738326965576
+AOSL,Technology,Semiconductors,North America,1203907328,Small Cap,High Volatility,Unknown,,0.0,47.45,19.38,2.427,276319.9203187251,30.023745046668793
+EHTH,Financial Services,Insurance Brokers,North America,167430400,Small Cap,Low Volatility,Unknown,,0.0,9.45,3.58,0.48,253941.0358565737,5.497729090580427
+MS,Financial Services,Capital Markets,North America,212028981248,Large Cap,High Volatility,Growth,20.00152,2.8099999,136.24,79.33,1.336,7150810.3585657375,97.03862963064734
+PFG,Financial Services,Asset Management,North America,19963203584,Mid Cap,High Volatility,Unknown,,3.35,91.98,72.21,1.203,1134872.111553785,80.39737601109235
+ALEX,Real Estate,REIT - Retail,North America,1436679424,Small Cap,High Volatility,Growth,24.0,4.52,20.3,15.53,1.283,325234.26294820715,17.463425412121047
+FIS,Technology,Information Technology Services,North America,46056202240,Mid Cap,High Volatility,Growth,87.93815,1.6900001000000002,91.98,57.13,1.074,3931704.780876494,73.79528375450833
+CNMD,Healthcare,Medical Devices,North America,2287162368,Small Cap,High Volatility,Value,17.545025,1.08,117.27,61.05,1.461,472974.9003984064,78.17888542570441
+PZZA,Consumer Cyclical,Restaurants,North America,1626530944,Small Cap,High Volatility,Value,17.242214,3.6900000000000004,78.67,39.9,1.19,965478.0876494024,56.34891549524558
+BIO,Healthcare,Medical Devices,North America,9463771136,Small Cap,Low Volatility,Unknown,,0.0,387.99,262.12,0.936,248304.780876494,317.4444223837074
+SAIC,Technology,Information Technology Services,North America,6152872448,Small Cap,Low Volatility,Growth,22.22719,1.1900000000000002,156.34,112.0,0.693,325595.219123506,129.55527663515858
+PCAR,Industrials,Farm & Heavy Construction Machinery,North America,61343215616,Mid Cap,Low Volatility,Value,13.087249,1.0299999,125.5,90.04,0.89,2578813.147410359,104.22370269289054
+TRST,Financial Services,Banks - Regional,North America,714032320,Small Cap,Low Volatility,Value,15.0161295,3.8699999999999997,38.89,25.83,0.821,81455.37848605578,29.921329885839942
+MRIN,Technology,Software - Application,North America,7167059,Small Cap,Low Volatility,Unknown,,0.0,5.46,1.44,0.571,540090.1832669323,2.2963346618105214
+CAMP,Healthcare,Biotechnology,North America,96571672,Small Cap,Unknown,Unknown,,0.0,12.3,4.06,,100600.0,9.13342855998448
+LE,Consumer Cyclical,Apparel Retail,North America,497521952,Small Cap,High Volatility,Unknown,,0.0,19.88,6.57,2.792,113355.37848605578,13.060697198389061
+CELH,Consumer Defensive,Beverages - Non-Alcoholic,North America,6686632448,Small Cap,High Volatility,Growth,39.51389,0.0,99.62,25.23,1.845,5914445.019920318,55.61748996293877
+QDEL,Healthcare,Medical Devices,North America,2765597696,Small Cap,Low Volatility,Unknown,,0.0,75.86,29.74,0.116,956408.3665338645,47.284820503447634
+COST,Consumer Defensive,Discount Stores,North America,430614740992,Large Cap,Low Volatility,Growth,58.830505,0.47999998000000005,976.3,591.46,0.789,1990399.6015936255,794.0347324082576
+DAY,Technology,Software - Application,North America,12614422528,Mid Cap,High Volatility,Growth,235.2647,0.0,82.69,47.08,1.271,1589840.637450199,62.46812741404985
+CMPR,Industrials,Specialty Business Services,North America,2019826176,Small Cap,High Volatility,Value,13.940972,0.0,104.92,58.05,2.05,149582.86852589643,84.8484857870763
+JCI,Industrials,Building Products & Equipment,North America,55530835968,Mid Cap,High Volatility,Growth,40.31731,1.76,87.16,51.7,1.306,5091901.195219124,66.40056920146561
+NTCT,Technology,Software - Infrastructure,North America,1579215232,Small Cap,Low Volatility,Unknown,,0.0,24.42,17.1,0.578,653858.5657370518,20.667051778846528
+ORC,Real Estate,REIT - Mortgage,North America,622033856,Small Cap,High Volatility,Value,6.385246,18.490000000000002,9.08,7.41,1.856,1615928.2868525896,7.55892681980513
+LWAY,Consumer Defensive,Packaged Foods,North America,367595968,Small Cap,High Volatility,Growth,28.430233,0.0,28.61,9.93,1.046,138017.13147410357,17.346812692771394
+XYL,Industrials,Specialty Industrial Machinery,North America,30793277440,Mid Cap,High Volatility,Growth,36.31805,1.1400000000000001,146.08,104.95,1.05,1237215.5378486055,127.6071507123362
+CRVL,Financial Services,Insurance Brokers,North America,6257913344,Small Cap,High Volatility,Growth,77.57961,0.0,381.73,212.7,1.099,36957.768924302785,272.4552199527087
+KTOS,Industrials,Aerospace & Defense,North America,4092594688,Small Cap,High Volatility,Growth,270.9,0.0,28.62,16.71,1.022,1125983.6653386455,20.756892405658128
+WEYS,Consumer Cyclical,Footwear & Accessories,North America,341362592,Small Cap,Low Volatility,Value,11.824503,2.91,41.05,27.05,0.692,12417.529880478087,29.722924525044355
+GRC,Industrials,Specialty Industrial Machinery,North America,1117291520,Small Cap,Low Volatility,Growth,29.17808,1.7399999999999998,43.79,30.47,0.915,83949.80079681275,36.47595691300958
+HCA,Healthcare,Medical Care Facilities,North America,82883837952,Mid Cap,High Volatility,Value,14.686714,0.8099999999999999,417.14,250.67,1.689,1198644.2231075696,332.4344704312632
+SEAC,Technology,Software - Application,North America,17521486,Small Cap,Low Volatility,Unknown,,0.0,7.3,1.5,0.992,1186.0557768924302,4.964581701385073
+MSM,Industrials,Industrial Distribution,North America,4801009664,Small Cap,Low Volatility,Value,18.751091,3.9600000000000004,104.76,75.05,0.826,561320.3187250996,87.50154344779087
+FBIN,Industrials,Building Products & Equipment,North America,9726896128,Small Cap,High Volatility,Growth,22.05634,1.23000005,90.54,62.54,1.576,1192488.4462151395,76.66215328201355
+ENS,Industrials,Electrical Equipment & Parts,North America,3849020672,Small Cap,High Volatility,Value,13.710638,0.9900000000000001,112.53,86.41,1.246,252423.90438247012,97.48383452882804
+KMB,Consumer Defensive,Household & Personal Products,North America,46471135232,Mid Cap,Low Volatility,Value,18.05052,3.5000000000000004,149.31,117.67,0.412,2083125.498007968,131.09703462152368
+PRLB,Industrials,Metal Fabrication,North America,1009571008,Small Cap,High Volatility,Growth,43.81915,0.0,42.66,25.76,1.319,201588.04780876494,33.22418320796404
+ARAY,Healthcare,Medical Devices,North America,224259952,Small Cap,High Volatility,Unknown,,0.0,3.05,1.4,1.404,648368.1274900398,2.1532270908355713
+GRMN,Technology,Scientific & Technical Instruments,North America,40824512512,Mid Cap,Low Volatility,Growth,27.013979,1.4099999,216.44,119.15,0.983,855329.8804780877,156.85051560116955
+AVY,Consumer Cyclical,Packaging & Containers,North America,16547341312,Mid Cap,Low Volatility,Growth,24.753607,1.71,233.48,190.04,0.896,464135.05976095615,211.41124473055046
+WTBA,Financial Services,Banks - Regional,North America,403815968,Small Cap,Low Volatility,Value,18.795277,4.19,24.85,15.8,0.94,28346.215139442233,18.433968205850913
+CDTX,Healthcare,Biotechnology,North America,221075152,Small Cap,Low Volatility,Unknown,,0.0,24.4,10.0,0.994,42585.258964143424,13.465952189320111
+SLB,Energy,Oil & Gas Equipment & Services,North America,62049869824,Mid Cap,High Volatility,Value,14.128617,2.5,55.69,38.66,1.532,11070858.167330677,46.743101066802126
+BRX,Real Estate,REIT - Retail,North America,9173664768,Small Cap,High Volatility,Growth,27.84259,3.82,30.67,20.8,1.546,2292907.5697211158,23.87977102363252
+MTX,Basic Materials,Specialty Chemicals,North America,2601161216,Small Cap,High Volatility,Value,17.318472,0.54,90.3,62.49,1.308,161321.11553784861,75.13289269983056
+RH,Consumer Cyclical,Specialty Retail,North America,7144655360,Small Cap,High Volatility,Growth,185.16348,0.0,398.22,212.43,2.43,734024.3027888446,283.0910760036028
+JRVR,Financial Services,Insurance - Specialty,North America,178176848,Small Cap,Low Volatility,Value,18.76,0.8500000000000001,11.49,4.35,0.177,735747.0119521912,7.819636960428549
+ZI,Technology,Software - Application,North America,3996163072,Small Cap,High Volatility,Growth,364.66666,0.0,19.39,7.65,1.037,7082583.665338646,13.329183301127765
+ACET,Healthcare,Biotechnology,North America,93113128,Small Cap,High Volatility,Unknown,,0.0,3.77,0.886,1.698,1061402.390438247,1.7434063788904137
+CI,Healthcare,Healthcare Plans,North America,93960077312,Mid Cap,Low Volatility,Growth,32.049335,1.66,370.83,253.95,0.511,1619802.390438247,331.83852863691715
+FIVE,Consumer Cyclical,Specialty Retail,North America,5116011008,Small Cap,High Volatility,Value,18.284023,0.0,216.18,64.87,1.203,1412088.844621514,134.50984079429352
+AMP,Financial Services,Asset Management,North America,55683465216,Mid Cap,High Volatility,Growth,21.932364,1.0299999,577.0,349.9,1.334,473387.64940239047,432.0548423979862
+TSCO,Consumer Cyclical,Specialty Retail,North America,30307020800,Mid Cap,Low Volatility,Growth,27.621227,1.55,307.64,205.48,0.814,1065831.87250996,257.5069378248724
+BMRN,Healthcare,Biotechnology,North America,12584196096,Mid Cap,Low Volatility,Growth,39.777107,0.0,99.56,61.15,0.31,1810951.7928286854,83.13513952612402
+FLR,Industrials,Engineering & Construction,North America,9627193344,Small Cap,High Volatility,Growth,38.710342,0.0,60.1,35.04,1.911,1735372.5099601594,43.907529838531616
+HRTG,Financial Services,Insurance - Property & Casualty,North America,381404608,Small Cap,Low Volatility,Value,4.9130435,0.0,16.9,5.51,0.986,469675.6972111554,9.403027887838295
+ATEN,Technology,Software - Infrastructure,North America,1264175616,Small Cap,High Volatility,Growth,25.833332,1.4099999,17.18,12.27,1.11,731803.5856573705,13.817160822955735
+SFBS,Financial Services,Banks - Regional,North America,5295944192,Small Cap,Low Volatility,Growth,25.609625,1.25,101.37,53.63,0.867,206214.74103585657,69.87376529951969
+MHO,Consumer Cyclical,Residential Construction,North America,4489657856,Small Cap,High Volatility,Value,8.86305,0.0,176.18,108.1,2.241,284092.4302788845,137.6915137606313
+SR,Utilities,Utilities - Regulated Gas,North America,4227256832,Small Cap,Low Volatility,Value,17.467781,4.62,73.64,56.36,0.541,422226.2948207171,61.4991413435613
+AVTR,Healthcare,Medical Instruments & Supplies,North America,14333730816,Mid Cap,High Volatility,Growth,46.8,0.0,28.0,19.59,1.348,6491760.956175298,23.77601588579763
+CALX,Technology,Software - Infrastructure,North America,2157259520,Small Cap,High Volatility,Unknown,,0.0,45.15,26.76,1.75,753996.015936255,35.92231087855609
+CVGW,Consumer Defensive,Food Distribution,North America,493282304,Small Cap,Low Volatility,Unknown,,2.8900001,31.26,20.3,0.573,206164.94023904382,26.315946837345443
+CHRW,Industrials,Integrated Freight & Logistics,North America,12480083968,Mid Cap,Low Volatility,Growth,36.53287,2.35,113.1,65.0,0.842,1489749.0039840636,88.28364499156693
+BA,Industrials,Aerospace & Defense,North America,116296482816,Large Cap,High Volatility,Unknown,,0.0,267.54,137.03,1.572,8922940.239043824,184.35992060809497
+MOS,Basic Materials,Agricultural Inputs,North America,8404886016,Small Cap,High Volatility,Growth,23.415928,3.17,38.3,24.12,1.36,4304056.972111554,29.390161468688234
+AAON,Industrials,Building Products & Equipment,North America,11081660416,Mid Cap,Low Volatility,Growth,59.798244,0.22999999999999998,144.07,62.01,0.791,585494.8207171315,88.6931396575563
+AJG,Financial Services,Insurance Brokers,North America,69160534016,Mid Cap,Low Volatility,Growth,59.474285,0.77,316.72,218.63,0.727,874385.2589641435,260.3543721233231
+JAKK,Consumer Cyclical,Leisure,North America,320147424,Small Cap,High Volatility,Value,10.079584,0.0,36.84,17.06,2.322,110552.98804780876,25.260159336713205
+OHI,Real Estate,REIT - Healthcare Facilities,North America,11281255424,Mid Cap,Low Volatility,Growth,29.860294,6.6000000000000005,44.42,27.53,0.978,1730119.123505976,33.11961839683502
+NTRS,Financial Services,Asset Management,North America,22033913856,Mid Cap,High Volatility,Value,13.843089,2.7,111.87,76.67,1.073,1293388.047808765,86.04634483307007
+TGT,Consumer Defensive,Discount Stores,North America,60626030592,Mid Cap,High Volatility,Value,14.030752,2.87,181.86,120.21,1.242,4370565.737051792,148.27361704913744
+YUM,Consumer Cyclical,Restaurants,North America,38883053568,Mid Cap,High Volatility,Growth,25.970095,1.9299999,143.2,123.7,1.095,1911483.6653386455,133.3106294001241
+TREX,Industrials,Building Products & Equipment,North America,8039014400,Small Cap,High Volatility,Growth,34.260273,0.0,101.91,58.68,1.49,999624.3027888446,79.45235066204907
+VAC,Consumer Cyclical,Resorts & Casinos,North America,3464936704,Small Cap,High Volatility,Value,18.86882,3.06,108.57,67.28,1.799,483657.76892430277,85.0686341851831
+APPS,Technology,Software - Application,North America,149365440,Small Cap,High Volatility,Unknown,,0.0,7.33,1.18,2.595,3075925.896414343,3.154183263797684
+FE,Utilities,Utilities - Regulated Electric,North America,24562626560,Mid Cap,Low Volatility,Growth,27.451612,4.0,44.97,35.41,0.495,2998718.725099602,38.918871359046236
+WCC,Industrials,Industrial Distribution,North America,10367290368,Mid Cap,High Volatility,Value,16.952726,0.7799999999999999,216.17,132.37,2.011,675180.876494024,169.33309985157027
+CBRE,Real Estate,Real Estate Services,North America,43059806208,Mid Cap,High Volatility,Growth,45.30421,0.0,142.0,80.59,1.395,1687554.9800796814,101.02729092176217
+BCC,Basic Materials,Building Materials,North America,5668519424,Small Cap,High Volatility,Value,14.456416,0.5700000000000001,155.42,109.015,1.514,304398.0079681275,129.72619601549854
+BEN,Financial Services,Asset Management,North America,11918684160,Mid Cap,High Volatility,Growth,26.77647,5.45,30.32,18.95,1.402,3929739.043824701,23.413365322280214
+CHD,Consumer Defensive,Household & Personal Products,North America,27037904896,Mid Cap,Low Volatility,Growth,49.608105,1.0299999,113.5,90.26,0.55,1388371.314741036,101.78118999830755
+MMS,Industrials,Specialty Business Services,North America,4458974208,Small Cap,Low Volatility,Value,14.92986,1.49,93.97,71.75,0.768,403580.4780876494,84.64436395044821
+EZPW,Financial Services,Credit Services,North America,688988160,Small Cap,Unknown,Value,11.636364,0.0,12.85,8.2,,509364.94023904385,10.53498009761491
+KOPN,Technology,Electronic Components,North America,180882192,Small Cap,High Volatility,Unknown,,0.0,2.82,0.56,2.591,1411045.8167330676,1.2908764925610972
+OMC,Communication Services,Advertising Agencies,North America,20449646592,Mid Cap,Low Volatility,Value,14.319672,2.6700001,107.0,80.92,0.968,1531910.7569721115,92.86184540402841
+TXT,Industrials,Aerospace & Defense,North America,15885391872,Mid Cap,High Volatility,Value,18.737417,0.09000000400000001,97.34,75.7,1.244,1087619.123505976,86.77948894728702
+TDC,Technology,Software - Infrastructure,North America,2960000512,Small Cap,Low Volatility,Growth,36.35294,0.0,49.44,24.02,0.798,951043.4262948207,35.43346607162658
+IMAX,Communication Services,Entertainment,North America,1386605952,Small Cap,High Volatility,Growth,59.81818,0.0,26.54,13.2,1.225,764159.3625498008,17.97175297984089
+MKC,Consumer Defensive,Packaged Foods,North America,20867567616,Mid Cap,Low Volatility,Growth,26.670069,2.3,85.49,63.88,0.764,1865437.450199203,72.77552550722403
+CCBG,Financial Services,Banks - Regional,North America,666935552,Small Cap,Low Volatility,Value,12.947369,2.34,40.86,25.45,0.543,32031.872509960158,30.27414955655892
+ARC,Industrials,Specialty Business Services,North America,146659536,Small Cap,High Volatility,Growth,30.818182,5.8999999999999995,3.44,2.56,1.117,188322.22357723577,2.874581079172894
+BG,Consumer Defensive,Farm Products,North America,12530127872,Mid Cap,Low Volatility,Value,11.373891,3.0299999,114.92,82.18,0.655,1543074.1035856574,97.31280158905395
+WRLD,Financial Services,Credit Services,North America,699722944,Small Cap,High Volatility,Value,8.265208,0.0,149.31,101.85,1.411,36996.41434262948,126.03661385950339
+PEB,Real Estate,REIT - Hotel & Motel,North America,1657748096,Small Cap,High Volatility,Unknown,,0.29,16.65,11.65,1.85,1718448.2071713146,14.159042430588924
+NWPX,Industrials,Metal Fabrication,North America,559316224,Small Cap,Low Volatility,Value,19.069727,0.0,57.08,26.91,0.979,42613.545816733065,36.76251009450966
+AWR,Utilities,Utilities - Regulated Water,North America,3226722816,Small Cap,Low Volatility,Growth,28.820944,2.18,87.5,66.03,0.489,217045.41832669324,76.78131057921634
+RGA,Financial Services,Insurance - Reinsurance,North America,15113227264,Mid Cap,Low Volatility,Growth,20.91575,1.5599999999999998,233.81,157.48,0.913,355535.45816733065,195.69601768706426
+RIGL,Healthcare,Biotechnology,North America,491107360,Small Cap,Low Volatility,Growth,102.259254,0.0,29.82,7.48,0.953,157526.25498007968,13.11940237820386
+IRWD,Healthcare,Drug Manufacturers - Specialty & Generic,North America,587304960,Small Cap,Low Volatility,Unknown,,0.0,15.7,3.26,0.475,2811469.721115538,7.6706374527448675
+AES,Utilities,Utilities - Diversified,North America,9271792640,Small Cap,High Volatility,Value,9.055555,5.29,22.21,12.53,1.09,8786582.071713148,17.169195129576906
+BAC,Financial Services,Banks - Diversified,North America,366533443584,Large Cap,High Volatility,Value,17.213768,2.19,48.08,30.33,1.325,38849899.20318725,37.847707087300215
+CATY,Financial Services,Banks - Regional,North America,3724399360,Small Cap,High Volatility,Value,13.133838,2.6099999,55.29,33.88,1.09,325592.4302788845,40.37236025988818
+HFWA,Financial Services,Banks - Regional,North America,915315520,Small Cap,Low Volatility,Growth,24.49074,3.4799999999999995,27.58,16.55,0.516,187319.1235059761,19.88577990892874
+STNG,Energy,Oil & Gas Midstream,North America,2561111296,Small Cap,Low Volatility,Value,3.626342,3.1600002000000003,84.67,49.98,0.166,927466.9322709163,68.81489312221329
+BERY,Consumer Cyclical,Packaging & Containers,North America,8330111488,Small Cap,High Volatility,Value,16.50913,1.8499999999999999,73.31,49.641872,1.133,1155148.4462151395,58.32870281265076
+DOCU,Technology,Software - Application,North America,16314934272,Mid Cap,Low Volatility,Value,16.883476,0.0,86.75,44.34,0.898,3243876.892430279,59.16651395212607
+MEDP,Healthcare,Diagnostics & Research,North America,10587325440,Mid Cap,High Volatility,Growth,29.853638,0.0,459.77,273.14,1.367,277074.1035856574,363.1161753133949
+RPM,Basic Materials,Specialty Chemicals,North America,17870284800,Mid Cap,Low Volatility,Growth,29.09434,1.47,141.79,100.82,0.981,620909.561752988,114.85831715861164
+CUBE,Real Estate,REIT - Industrial,North America,11401129984,Mid Cap,Low Volatility,Growth,27.842697,4.1199997,55.14,39.8,0.859,1378476.892430279,45.38303750634668
+NMIH,Financial Services,Insurance - Specialty,North America,3167655936,Small Cap,High Volatility,Value,9.151031,0.0,42.49,27.25,1.131,526626.2948207172,34.28143423012053
+KALU,Basic Materials,Aluminum,North America,1313744896,Small Cap,High Volatility,Growth,28.027584,3.7900000000000005,102.42,58.2,1.309,146062.1513944223,76.77105387653488
+REI,Energy,Oil & Gas E&P,North America,303239872,Small Cap,High Volatility,Value,2.6842105,0.0,2.2,1.25,1.635,1813398.406374502,1.6689242969946083
+TSLA,Consumer Cyclical,Auto Manufacturers,North America,1107984384000,Large Cap,High Volatility,Growth,94.30601,0.0,361.93,138.8,2.295,96770662.5498008,216.4244623070219
+BGC,Financial Services,Capital Markets,North America,4777274880,Small Cap,High Volatility,Growth,42.347824,0.8200000000000001,11.79,6.09,1.486,3543039.043824701,8.425003091652554
+TRGP,Energy,Oil & Gas Midstream,North America,44550275072,Mid Cap,High Volatility,Growth,36.87726,1.47,209.87,81.03,2.237,1632798.0079681275,124.20069517462377
+MNR,Energy,Oil & Gas E&P,North America,1612374144,Small Cap,Unknown,Unknown,,14.790000000000001,21.19,14.4,,145505.57768924301,16.469315597260614
+SXT,Basic Materials,Specialty Chemicals,North America,3288892416,Small Cap,Low Volatility,Growth,37.148327,2.11,82.99,55.02,0.755,181468.52589641433,71.08720046875486
+FCNCA,Financial Services,Banks - Regional,North America,29974077440,Mid Cap,Low Volatility,Value,13.140568,0.33999999999999997,2388.78,1363.97,0.806,87156.97211155378,1738.6675577961591
+AM,Energy,Oil & Gas Midstream,North America,7686744576,Small Cap,High Volatility,Value,19.9625,5.6399997,16.0,11.58,2.238,2627147.410358566,13.640490524322388
+HPE,Technology,Communication Equipment,North America,27557775360,Mid Cap,High Volatility,Value,15.049645,2.4500001,22.82,14.465,1.206,14885225.099601593,18.146294039084143
+ADM,Consumer Defensive,Farm Products,North America,26127955968,Mid Cap,Low Volatility,Value,15.337078,3.7900000000000005,77.35,48.92,0.722,4147194.8207171313,59.27951533100995
+PR,Energy,Oil & Gas E&P,North America,12524444672,Mid Cap,High Volatility,Value,8.897727,3.83,18.28,12.34,4.351,10058352.589641435,14.603506498602757
+PNFP,Financial Services,Banks - Regional,North America,9829441536,Small Cap,High Volatility,Growth,24.350576,0.69,131.91,73.62,1.037,473689.2430278885,89.06150899940278
+HNRG,Energy,Thermal Coal,North America,522059936,Small Cap,Low Volatility,Unknown,,0.0,14.0,4.332,0.621,484115.1394422311,7.935597607813984
+HELE,Consumer Defensive,Household & Personal Products,North America,1675707904,Small Cap,Low Volatility,Value,12.303692,0.0,127.83,48.05,0.852,432631.87250996014,90.13494032597637
+NLY,Real Estate,REIT - Mortgage,North America,11171721216,Mid Cap,High Volatility,Unknown,,13.05,21.11,17.67,1.579,4353196.0159362545,18.48084389735978
+SYF,Financial Services,Credit Services,North America,26288504832,Mid Cap,High Volatility,Value,8.768831,1.48,68.69,33.51,1.593,3996642.629482072,45.386772839671586
+FLEX,Technology,Electronic Components,North America,15111904256,Mid Cap,High Volatility,Value,18.735579,0.0,42.47,18.80181,1.076,4521657.211155378,29.62277452689243
+CIEN,Technology,Communication Equipment,North America,10069450752,Mid Cap,Low Volatility,Growth,74.17021,0.0,73.47,42.2,0.938,1818773.3067729084,53.22175306342987
+PACB,Healthcare,Medical Devices,North America,562141632,Small Cap,High Volatility,Unknown,,0.0,10.65,1.16,2.009,9290064.541832669,3.421553790806774
+FLXS,Consumer Cyclical,"Furnishings, Fixtures & Appliances",North America,308159040,Small Cap,Low Volatility,Growth,23.517927,1.15,63.0,17.0,0.444,30179.282868525897,36.38321331677684
+LXU,Basic Materials,Chemicals,North America,632414336,Small Cap,Low Volatility,Unknown,,0.0,10.4,6.74,0.842,384591.6334661355,8.35932269229357
+LYTS,Technology,Electronic Components,North America,609894848,Small Cap,Low Volatility,Growth,26.20513,0.98,21.17,13.21,0.866,115264.14342629482,15.195137259494736
+BLDR,Industrials,Building Products & Equipment,North America,21459900416,Mid Cap,High Volatility,Value,18.20996,0.0,214.7,130.75,2.081,1662350.5976095619,173.8644223764123
+ED,Utilities,Utilities - Regulated Electric,North America,35188596736,Mid Cap,Low Volatility,Value,18.907894,3.3000000000000003,107.75,85.85,0.353,1873317.1314741035,93.13343038976905
+WAB,Industrials,Railroads,North America,34484572160,Mid Cap,High Volatility,Growth,33.436665,0.4,203.04,117.66,1.272,1044775.6972111554,157.05554712911052
+CW,Industrials,Aerospace & Defense,North America,14178586624,Mid Cap,High Volatility,Growth,35.348156,0.22,393.4,212.05,1.177,221758.1673306773,277.3361848018084
+NOVT,Technology,Scientific & Technical Instruments,North America,5998138368,Small Cap,High Volatility,Growth,101.2,0.0,187.12,145.24,1.287,149223.90438247012,167.3839838400305
+DIOD,Technology,Semiconductors,North America,3011638528,Small Cap,High Volatility,Growth,49.242424,0.0,86.74,52.71,1.32,347298.8047808765,69.19494043783362
+GS,Financial Services,Capital Markets,North America,191036227584,Large Cap,High Volatility,Value,17.825718,1.97,612.73,340.54,1.342,2217045.418326693,448.2372170254529
+UHS,Healthcare,Medical Care Facilities,North America,13522948096,Mid Cap,High Volatility,Value,13.639388,0.38999999999999996,243.25,133.7,1.297,668314.342629482,187.2215378597913
+ASPS,Real Estate,Real Estate Services,North America,25480966,Small Cap,Low Volatility,Unknown,,0.0,4.59,0.7,0.939,121820.7171314741,1.899282866502663
+CCK,Consumer Cyclical,Packaging & Containers,North America,11128155136,Mid Cap,Low Volatility,Growth,112.30488,1.09,98.46,69.61,0.853,1127782.470119522,84.68474524144632
+LGIH,Consumer Cyclical,Residential Construction,North America,2593533440,Small Cap,High Volatility,Value,13.081243,0.0,136.89,84.0,1.978,212859.3625498008,108.38621520996094
+UNF,Industrials,Specialty Business Services,North America,3766894848,Small Cap,Low Volatility,Growth,25.851994,0.69999998,208.2,149.58,0.823,84079.2828685259,175.61631428388011
+MPWR,Technology,Semiconductors,North America,27689480192,Mid Cap,High Volatility,Growth,64.067726,0.88,959.64,545.92,1.148,601479.6812749004,744.068743337198
+RMBS,Technology,Semiconductors,North America,6161100800,Small Cap,High Volatility,Growth,35.906834,0.0,76.38,37.42,1.166,1593527.888446215,55.742589684596574
+DE,Industrials,Farm & Heavy Construction Machinery,North America,127497732096,Large Cap,Low Volatility,Value,18.18501,1.45000005,469.39,340.2,0.935,1489247.8087649401,385.6246629692169
+AAOI,Technology,Communication Equipment,North America,1858123520,Small Cap,High Volatility,Unknown,,0.0,43.05,6.7,1.961,2722928.685258964,14.88482073293739
+SSTK,Communication Services,Internet Content & Information,North America,1107529600,Small Cap,High Volatility,Growth,31.058825,3.7900000000000005,54.41,28.85,1.102,508237.8486055777,39.40576338293068
+BTU,Energy,Thermal Coal,North America,2946381312,Small Cap,Low Volatility,Value,6.2928762,1.26,29.94,20.21,0.98,2995325.498007968,23.945445018935487
+MPX,Consumer Cyclical,Recreational Vehicles,North America,343311584,Small Cap,High Volatility,Value,18.66038,5.6599997,12.47,8.86,1.208,51603.58565737052,9.712946109087818
+XNCR,Healthcare,Biotechnology,North America,1792939648,Small Cap,Low Volatility,Unknown,,0.0,26.84,15.31,0.656,610210.7569721115,20.83059762673549
+VTR,Real Estate,REIT - Healthcare Facilities,North America,27075213312,Mid Cap,High Volatility,Unknown,,2.8099999,67.61,41.45,1.39,2400511.5537848608,51.83454822069145
+EFSC,Financial Services,Banks - Regional,North America,2258855680,Small Cap,Low Volatility,Value,12.836865,1.8499999999999999,63.13,37.28,0.977,149129.88047808764,44.68856922468816
+VNDA,Healthcare,Biotechnology,North America,302619168,Small Cap,Low Volatility,Unknown,,0.0,6.75,3.46,0.767,1238264.143426295,4.777609576267075
+BRKL,Financial Services,Banks - Regional,North America,1135114368,Small Cap,Low Volatility,Value,15.168675,4.29,13.15,8.01,0.744,517114.3426294821,9.661093337602349
+EHC,Healthcare,Medical Care Facilities,North America,10371205120,Mid Cap,Low Volatility,Growth,24.221176,0.66000004,104.55,64.15,0.78,636209.9601593625,83.6671765696005
+RMTI,Healthcare,Drug Manufacturers - Specialty & Generic,North America,74010048,Small Cap,High Volatility,Unknown,,0.0,5.15,1.16,1.503,379586.4541832669,2.1732669337337236
+ACCO,Industrials,Business Equipment & Supplies,North America,540567424,Small Cap,High Volatility,Unknown,,5.1499999999999995,6.62,4.37,1.615,618917.1314741035,5.1922022014025195
+COO,Healthcare,Medical Instruments & Supplies,North America,20803835904,Mid Cap,Low Volatility,Growth,58.033333,0.02,112.38,82.5525,0.99,1139544.2231075696,96.80137461020178
+PLUG,Industrials,Electrical Equipment & Parts,North America,2041081216,Small Cap,High Volatility,Unknown,,0.0,5.14,1.6,1.81,41287581.2749004,2.9023506019219933
+NL,Industrials,Security & Protection Services,North America,389316256,Small Cap,Low Volatility,Value,6.6806717,4.03,8.93,4.46,0.507,33415.53784860558,6.199024872950823
+RBCAA,Financial Services,Banks - Regional,North America,1504333696,Small Cap,Low Volatility,Value,14.50095,2.1300000999999997,80.68,46.55,0.531,18121.91235059761,56.217770200326626
+KD,Technology,Information Technology Services,North America,8087672832,Small Cap,High Volatility,Unknown,,0.0,35.23,18.045,1.719,1746784.06374502,23.45402386273996
+LOPE,Consumer Defensive,Education & Training Services,North America,4802933760,Small Cap,Low Volatility,Growth,21.656578,0.0,173.37,118.48,0.702,185384.46215139443,139.4423106524099
+JACK,Consumer Cyclical,Restaurants,North America,919869888,Small Cap,High Volatility,Unknown,,3.8599998,86.2,40.84,1.946,504510.7569721115,58.83422684384532
+CME,Financial Services,Financial Data & Stock Exchanges,North America,85765447680,Mid Cap,Low Volatility,Growth,24.999998,1.9299999,238.97,190.7,0.559,1927016.733067729,209.33985961670894
+APD,Basic Materials,Specialty Chemicals,North America,74347970560,Mid Cap,Low Volatility,Value,19.381449,2.12,336.42,212.24,0.826,1589759.7609561754,265.8043674909736
+COLL,Healthcare,Drug Manufacturers - Specialty & Generic,North America,990405120,Small Cap,Low Volatility,Value,13.034188,0.0,42.287,25.21,0.949,445104.3824701195,34.51509959764215
+VRNT,Technology,Software - Infrastructure,North America,1562538624,Small Cap,High Volatility,Growth,38.181816,0.0,38.17,21.28,1.21,683478.8844621514,29.275537878393653
+FFIN,Financial Services,Banks - Regional,North America,5967367680,Small Cap,Low Volatility,Growth,28.744827,1.73,44.66,26.54,0.791,538968.5258964143,32.677951903932126
+WMS,Industrials,Building Products & Equipment,North America,10489858048,Mid Cap,High Volatility,Growth,21.508743,0.47000000000000003,184.27,122.61,1.533,506821.9123505976,153.8661606625257
+ITCI,Healthcare,Drug Manufacturers - Specialty & Generic,North America,9180052480,Small Cap,Low Volatility,Unknown,,0.0,93.45,58.925,0.973,854529.8804780877,72.37521904873184
+VST,Utilities,Utilities - Independent Power Producers,North America,54381719552,Mid Cap,High Volatility,Growth,30.101694,0.5499999999999999,168.67,35.99,1.111,6629494.023904382,80.61216743438843
+ATR,Healthcare,Medical Instruments & Supplies,North America,11509329920,Mid Cap,Low Volatility,Growth,34.730927,1.04,178.03,122.29,0.567,293097.2111553785,145.00039703247558
+GES,Consumer Cyclical,Apparel Retail,North America,846411008,Small Cap,High Volatility,Value,12.014598,6.92,33.5,15.24,1.986,1107680.079681275,21.36932206628807
+WLK,Basic Materials,Specialty Chemicals,North America,16545110016,Mid Cap,High Volatility,Growth,178.33331,1.6400000000000001,162.64,118.64,1.191,436539.0438247012,142.2495438473158
+COR,Healthcare,Medical Distribution,North America,48619585536,Mid Cap,Low Volatility,Growth,33.450798,0.8699999999999999,253.27,195.83,0.436,1385264.940239044,228.61910579119072
+HEI,Industrials,Aerospace & Defense,North America,32504512512,Mid Cap,High Volatility,Growth,79.93275,0.08,283.6,169.7,1.237,388509.9601593625,218.99963755816577
+ARCB,Industrials,Trucking,North America,2697505792,Small Cap,High Volatility,Value,14.338308,0.42,153.6,94.77,1.474,292684.8605577689,117.31910191874105
+IPI,Basic Materials,Agricultural Inputs,North America,356854368,Small Cap,High Volatility,Unknown,,0.0,29.75,17.52,2.185,97948.60557768925,22.84713144036403
+LGND,Healthcare,Biotechnology,North America,2315631104,Small Cap,Low Volatility,Growth,48.783134,0.0,129.9,58.97,0.896,136380.8764940239,87.92470096116998
+CVCO,Consumer Cyclical,Residential Construction,North America,4181907456,Small Cap,High Volatility,Growth,29.067795,0.0,544.08,288.57,1.247,65681.67330677291,381.251433475084
+CWCO,Utilities,Utilities - Regulated Water,North America,428650208,Small Cap,Low Volatility,Value,16.222893,1.79,37.85,23.55,0.173,120850.19920318725,27.8282839634504
+CHX,Energy,Oil & Gas Equipment & Services,North America,5895974912,Small Cap,High Volatility,Value,19.104939,1.23000005,39.95,25.46,2.39,1810629.482071713,31.327631429847017
+BLBD,Industrials,Farm & Heavy Construction Machinery,North America,1311694208,Small Cap,High Volatility,Value,12.863924,0.0,59.4,19.3,1.619,636901.1952191235,40.75934264194443
+ENPH,Technology,Solar,North America,9639884800,Small Cap,High Volatility,Growth,155.10869,0.0,141.63,58.33,1.767,4224659.760956176,109.80466158741498
+HWM,Industrials,Aerospace & Defense,North America,48093175808,Mid Cap,High Volatility,Growth,45.53077,0.27,119.28,52.06,1.293,2864824.302788845,79.47724051304547
+BCOV,Technology,Software - Application,North America,193818720,Small Cap,Low Volatility,Unknown,,0.0,4.33,1.55,0.744,312338.2470119522,2.24709163623977
+LPSN,Technology,Software - Application,North America,88169144,Small Cap,High Volatility,Unknown,,0.0,3.98,0.45,1.788,2766079.6812749,1.4579282836372633
+FNLC,Financial Services,Banks - Regional,North America,320503968,Small Cap,Low Volatility,Value,12.004201,5.04,31.05,21.77,0.547,17023.505976095617,24.658387096754584
+PANW,Technology,Software - Infrastructure,North America,127243747328,Large Cap,High Volatility,Growth,50.235752,0.0,408.53,260.09,1.118,3855070.119521912,325.3380075887855
+WMT,Consumer Defensive,Discount Stores,North America,743538098176,Large Cap,Low Volatility,Growth,38.22314,0.9900000000000001,92.64,49.84667,0.516,17702963.346613545,66.59015041518497
+A,Healthcare,Diagnostics & Research,North America,39396507648,Mid Cap,High Volatility,Growth,31.14447,0.74,155.35,124.16,1.072,1731164.5418326694,137.01010286855507
+H,Consumer Cyclical,Lodging,North America,14992549888,Mid Cap,High Volatility,Value,11.893073,0.38,162.24,116.2,1.507,602880.079681275,145.56460823575813
+CEVA,Technology,Semiconductors,North America,702658048,Small Cap,High Volatility,Unknown,,0.0,31.22,16.02,1.199,155284.46215139443,22.18553783979074
+VLGEA,Consumer Defensive,Grocery Stores,North America,476395744,Small Cap,Low Volatility,Value,9.520588,3.09,33.99,24.42,0.264,26064.54183266932,27.910945588374044
+NFG,Energy,Oil & Gas Integrated,North America,5809934848,Small Cap,Low Volatility,Growth,76.15476,3.2199999999999998,65.06,45.32,0.64,517531.47410358564,54.40766076927641
+NTGR,Technology,Communication Equipment,North America,707737088,Small Cap,Low Volatility,Growth,36.71642,0.0,25.39,10.48,0.827,268473.30677290837,16.215497970581055
+UBSI,Financial Services,Banks - Regional,North America,5745507328,Small Cap,High Volatility,Value,15.950943,3.5000000000000004,44.43,30.68,1.006,549218.7250996016,35.22244722434724
+IBKR,Financial Services,Capital Markets,North America,80832790528,Mid Cap,Low Volatility,Growth,29.764797,0.52,193.42,77.75,0.792,1029522.3107569721,119.66256786817573
+ACLS,Technology,Semiconductor Equipment & Materials,North America,2413252864,Small Cap,High Volatility,Value,10.982248,0.0,158.61,69.35,1.599,637394.422310757,113.10637458102161
+PEG,Utilities,Utilities - Regulated Electric,North America,46982619136,Mid Cap,Low Volatility,Growth,23.169533,2.55,95.22,56.85,0.626,2771482.868525896,72.50833126843213
+ZTS,Healthcare,Drug Manufacturers - Specialty & Generic,North America,79738920960,Mid Cap,Low Volatility,Growth,32.879925,0.9900000000000001,201.92,144.8,0.896,2481643.027888446,179.90095076238018
+CINF,Financial Services,Insurance - Property & Casualty,North America,25035452416,Mid Cap,Low Volatility,Value,8.20904,2.0299999,161.75,100.31,0.666,689332.2709163347,121.53648777691967
+HPQ,Technology,Computer Hardware,North America,34133544960,Mid Cap,High Volatility,Value,12.6085415,2.8199999,39.8,27.43,1.087,8002960.557768924,32.378978151724155
+DRRX,Healthcare,Drug Manufacturers - Specialty & Generic,North America,28325792,Small Cap,High Volatility,Unknown,,0.0,1.88,0.48,1.133,151778.08764940238,1.138725096723473
+UGI,Utilities,Utilities - Regulated Gas,North America,6520378368,Small Cap,High Volatility,Growth,24.296001,6.0500003,30.48,21.51,1.148,2205605.1792828687,23.572136791578803
+FLIC,Financial Services,Banks - Regional,North America,330039008,Small Cap,Low Volatility,Value,16.632185,5.81,15.03,9.3,0.68,137885.65737051793,11.445832963008804
+HIG,Financial Services,Insurance - Property & Casualty,North America,35871125504,Mid Cap,Low Volatility,Value,12.380522,1.6900001000000002,124.9,77.59,0.936,1591841.434262948,101.26818473785522
+REG,Real Estate,REIT - Retail,North America,13861316608,Mid Cap,High Volatility,Growth,35.65566,3.73,76.53,56.51,1.218,1096998.406374502,64.41846227455899
+GLRE,Financial Services,Insurance - Reinsurance,North America,520049248,Small Cap,Low Volatility,Value,5.901186,0.0,15.82,10.8,0.854,85401.593625498,12.748486055320953
+BHB,Financial Services,Banks - Regional,North America,549491776,Small Cap,Low Volatility,Value,12.946044,3.2800000000000002,38.47,23.26,0.66,37998.00796812749,27.730864490645814
+LMAT,Healthcare,Medical Instruments & Supplies,North America,2405563136,Small Cap,Low Volatility,Growth,58.785713,0.6,109.58,52.55,0.885,123721.1155378486,76.0748083259005
+OVV,Energy,Oil & Gas E&P,North America,11842173952,Mid Cap,High Volatility,Value,5.992084,2.6400002,55.95,36.91,2.641,3052106.7729083668,44.88000994374553
+DX,Real Estate,REIT - Mortgage,North America,995259008,Small Cap,High Volatility,Value,9.960318,14.34,13.13,11.36,1.317,1521113.9442231075,11.503938956089703
+HBAN,Financial Services,Banks - Regional,North America,26165108736,Mid Cap,High Volatility,Value,17.485437,3.44,18.45,11.58,1.057,16110586.055776892,13.658350860930058
+LSCC,Technology,Semiconductors,North America,7829854720,Small Cap,High Volatility,Growth,55.637257,0.0,85.69,40.65,1.39,2358129.482071713,62.07557764851239
+TTEC,Technology,Information Technology Services,North America,247235696,Small Cap,High Volatility,Unknown,,2.32,22.7,3.67,1.057,519376.4940239044,9.848489007151935
+CMI,Industrials,Specialty Industrial Machinery,North America,51448737792,Mid Cap,Low Volatility,Growth,24.576672,1.94,379.66,224.6,0.971,1390227.4900398406,284.30093310838674
+R,Industrials,Rental & Leasing Services,North America,7140277248,Small Cap,High Volatility,Value,15.794201,1.9199998999999999,171.78,105.09,1.272,266531.47410358564,126.18264396637085
+BV,Industrials,Specialty Business Services,North America,1624500096,Small Cap,Unknown,Growth,85.5,0.0,18.89,7.735,,607158.5657370518,12.610159372428498
+PCRX,Healthcare,Drug Manufacturers - Specialty & Generic,North America,780788800,Small Cap,Low Volatility,Unknown,,0.0,35.95,11.16,0.818,826933.4661354582,24.278127499310617
+GFF,Industrials,Conglomerates,North America,4031386368,Small Cap,High Volatility,Value,19.92908,0.8500000000000001,86.73,47.83,1.274,450576.8924302789,65.87911537443973
+ESCA,Consumer Cyclical,Leisure,North America,208159504,Small Cap,High Volatility,Value,15.957447,4.0,22.01,12.34,1.25,21923.505976095617,14.518067983042197
+AGYS,Technology,Software - Application,North America,3753752320,Small Cap,Low Volatility,Growth,38.15341,0.0,139.99,73.52,0.849,211199.203187251,96.18139450863538
+BHF,Financial Services,Insurance - Life,North America,3106008832,Small Cap,High Volatility,Unknown,,0.0,56.245,40.0,1.057,418269.72111553786,47.702430329949735
+RMD,Healthcare,Medical Instruments & Supplies,North America,36600463360,Mid Cap,Low Volatility,Growth,32.98278,0.8500000000000001,260.49,159.6,0.687,1020700.0,206.33025132137465
+GEO,Industrials,Security & Protection Services,North America,4011642112,Small Cap,Low Volatility,Growth,101.82143,0.0,29.57,9.77,0.625,2708712.3505976098,14.161673287471451
+FFIV,Technology,Software - Infrastructure,North America,14674240512,Mid Cap,High Volatility,Growth,26.24214,0.0,252.3,159.01,1.05,526978.8844621514,191.7074899863437
+UTHR,Healthcare,Biotechnology,North America,16881413120,Mid Cap,Low Volatility,Value,16.285275,0.0,417.82,208.62,0.561,451811.15537848603,289.400557073464
+CRM,Technology,Software - Application,North America,315489550336,Large Cap,High Volatility,Growth,57.489548,0.47999998000000005,348.86,212.0,1.288,6283278.087649402,274.8944364144983
+TISI,Industrials,Specialty Business Services,North America,75710848,Small Cap,Unknown,Unknown,,0.0,26.77,5.05,,18284.860557768923,10.272509943441566
+BIIB,Healthcare,Drug Manufacturers - General,North America,23406845952,Mid Cap,Low Volatility,Value,14.510389,0.0,268.3,153.62,-0.061,1185267.7290836654,214.77083706190862
+TKR,Industrials,Tools & Accessories,North America,5430577152,Small Cap,High Volatility,Value,16.068464,1.76,94.71,72.35,1.427,484954.58167330676,81.85601241275134
+CTLT,Healthcare,Drug Manufacturers - Specialty & Generic,North America,11092198400,Mid Cap,High Volatility,Unknown,,0.0,61.5,36.739,1.158,2018805.577689243,55.80063744655168
+MITT,Real Estate,REIT - Mortgage,North America,201551936,Small Cap,High Volatility,Value,2.8697476,8.930001,7.95,5.41,2.065,218930.67729083664,6.355597722102921
+ALGN,Healthcare,Medical Instruments & Supplies,North America,17377003520,Mid Cap,High Volatility,Growth,39.654175,0.0,335.4,196.09,1.65,827993.2270916335,259.17645409572646
+MOFG,Financial Services,Banks - Regional,North America,684532992,Small Cap,High Volatility,Unknown,,2.94,34.56,19.43,1.003,49046.613545816734,24.901504250636613
+HOV,Consumer Cyclical,Residential Construction,North America,1142227456,Small Cap,High Volatility,Value,6.130652,0.0,240.34,95.3,2.607,82824.70119521912,167.17266970326702
+RGR,Industrials,Aerospace & Defense,North America,639561600,Small Cap,Unknown,Growth,22.017342,1.16,48.2,37.18,,152304.780876494,42.69809905276355
+RGLD,Basic Materials,Gold,North America,9617589248,Small Cap,Low Volatility,Growth,33.545868,1.23000005,155.1,100.55,0.647,371963.74501992034,127.55431879659098
+PLOW,Consumer Cyclical,Auto Parts,North America,597903616,Small Cap,High Volatility,Value,11.1115885,4.5600000000000005,31.39,21.31,1.208,207608.76494023905,25.09699743962383
+FORR,Industrials,Consulting Services,North America,327680992,Small Cap,Low Volatility,Unknown,,0.0,27.89,14.38,0.888,111294.42231075697,19.609402386790727
+DCOM,Financial Services,Banks - Regional,North America,1566768384,Small Cap,High Volatility,Growth,23.92,2.79,37.6,17.29,1.108,231307.96812749005,23.028652327944084
+EW,Healthcare,Medical Devices,North America,42506903552,Mid Cap,High Volatility,Growth,27.548264,0.0,96.12,58.93,1.12,4651907.96812749,78.70414323540798
+PDFS,Technology,Software - Application,North America,1225223680,Small Cap,High Volatility,Growth,287.27274,0.0,39.7,27.69,1.486,167894.8207171315,32.35549798334737
+VRSK,Industrials,Consulting Services,North America,41595117568,Mid Cap,Low Volatility,Growth,45.472954,0.53,296.58,217.34,0.862,794768.9243027888,254.5026419590194
+WY,Real Estate,REIT - Specialty,North America,23504926720,Mid Cap,High Volatility,Growth,44.191776,2.48,36.27,26.73,1.428,3629823.505976096,31.39208999572997
+ALTM,Basic Materials,Specialty Chemicals,North America,5645849600,Small Cap,High Volatility,Growth,29.166666,0.0,7.80133,2.19,1.495,16072671.33864542,4.430868487909021
+KVHI,Technology,Communication Equipment,North America,109093048,Small Cap,Low Volatility,Unknown,,0.0,5.55,4.17,0.603,80909.16334661354,4.8455378581803155
+CORT,Healthcare,Biotechnology,North America,6139805184,Small Cap,Low Volatility,Growth,45.77778,0.0,61.66,20.84,0.455,1135880.876494024,32.74976085951604
+RVNC,Healthcare,Biotechnology,North America,396529600,Small Cap,Low Volatility,Unknown,,0.0,9.745,2.3,0.953,2612106.7729083668,5.0333864536893325
+ANIP,Healthcare,Drug Manufacturers - Specialty & Generic,North America,1248243584,Small Cap,Low Volatility,Unknown,,0.0,70.81,48.2,0.71,215938.2470119522,60.6276892095923
+VGR,Consumer Defensive,Tobacco,North America,2359066112,Small Cap,High Volatility,Value,11.896825,5.3400002,15.5349,9.275,1.002,1458235.558685446,11.402499046683872
+MC,Financial Services,Capital Markets,North America,5433764864,Small Cap,High Volatility,Growth,145.2453,3.1199999999999997,81.6,46.24,1.342,639024.3027888446,58.665780542381256
+NKSH,Financial Services,Banks - Regional,North America,204187120,Small Cap,Low Volatility,Growth,21.9863,4.8600003,37.0,26.36,0.507,14468.924302788844,29.41914914043776
+ISRG,Healthcare,Medical Instruments & Supplies,North America,193049018368,Large Cap,High Volatility,Growth,86.9984,0.0,552.0,304.5,1.389,1458639.043824701,424.2226296231091
+LECO,Industrials,Tools & Accessories,North America,12327908352,Mid Cap,High Volatility,Growth,26.040524,1.37,261.13,169.51,1.152,314821.9123505976,210.87932522838335
+NOG,Energy,Oil & Gas E&P,North America,4341398016,Small Cap,High Volatility,Value,5.128538,3.8599998,44.31,31.13,1.814,1335576.4940239044,37.3527774810791
+NSC,Industrials,Railroads,North America,62408306688,Mid Cap,High Volatility,Growth,25.90141,1.96,277.6,206.71,1.302,1235374.9003984064,239.12285811587634
+ST,Technology,Scientific & Technical Instruments,North America,4807051264,Small Cap,High Volatility,Unknown,,1.49,43.14,30.44,1.253,1862528.685258964,36.030362459767865
+TSE,Basic Materials,Specialty Chemicals,North America,154351504,Small Cap,High Volatility,Unknown,,0.9199999999999999,8.83,1.935,1.621,463050.99601593625,4.309941388696314
+LOW,Consumer Cyclical,Home Improvement Retail,North America,154256687104,Large Cap,High Volatility,Growth,22.683596,1.6900001000000002,287.01,203.72,1.098,2525480.079681275,236.38851369424646
+AVGO,Technology,Semiconductors,North America,757007646720,Large Cap,High Volatility,Growth,131.77235,1.3099999,186.42,90.31,1.187,30474851.39442231,143.55795157383162
+RDUS,Basic Materials,Steel,North America,555742912,Small Cap,High Volatility,Unknown,,3.7800000000000002,31.7,12.69,1.544,215958.9641434263,19.140347313595957
+INVH,Real Estate,REIT - Residential,North America,21202290688,Mid Cap,High Volatility,Growth,47.569443,3.27,37.8,31.01,1.014,3349045.019920319,34.0670514201738
+BOX,Technology,Software - Infrastructure,North America,5025870336,Small Cap,Low Volatility,Growth,44.41772,0.0,35.74,23.29,0.852,2011374.9003984064,28.333705187793747
+LIN,Basic Materials,Specialty Chemicals,North America,219504082944,Large Cap,Low Volatility,Growth,34.97648,1.21,487.49,396.07,0.949,1864140.2390438246,442.3862219578716
+BRC,Industrials,Security & Protection Services,North America,3583134464,Small Cap,Low Volatility,Value,18.40049,1.2899999500000001,77.68,55.97,0.758,283759.3625498008,65.23551804135995
+HUBG,Industrials,Integrated Freight & Logistics,North America,3171832064,Small Cap,Low Volatility,Growth,29.17514,0.97,53.21,38.07,0.889,478167.33067729085,43.700700357140775
+TNK,Energy,Oil & Gas Midstream,North America,1405171712,Small Cap,Low Volatility,Value,3.3045976,2.48,74.2,39.84,-0.334,362007.171314741,56.242098394143156
+ICON,Industrials,Marine Shipping,North America,4653775,Small Cap,Unknown,Value,10.525926,11.959999999999999,3.85,1.81,,35144.444444444445,2.4130610347998265
+OLN,Basic Materials,Chemicals,North America,4978685952,Small Cap,High Volatility,Growth,33.801586,1.8800000000000001,60.6,39.47,1.423,1218086.0557768925,48.95993409783717
+AEIS,Industrials,Electrical Equipment & Parts,North America,4333913600,Small Cap,High Volatility,Growth,95.86666,0.34999999,120.81,89.12,1.484,217480.0796812749,104.26353582253019
+CBSH,Financial Services,Banks - Regional,North America,9473482752,Small Cap,Low Volatility,Value,19.20573,1.46,76.39,49.2,0.741,526981.2749003984,57.00081418709926
+TXN,Technology,Semiconductors,North America,183382982656,Large Cap,Low Volatility,Growth,37.29685,2.71,220.39,154.02,0.98,5556182.470119522,183.61143603077923
+DXPE,Industrials,Industrial Distribution,North America,1149965312,Small Cap,High Volatility,Value,18.88402,0.0,74.3,29.36,1.605,104550.59760956175,47.35984059064037
+PBF,Energy,Oil & Gas Refining & Marketing,North America,3625223168,Small Cap,High Volatility,Unknown,,3.49,62.88,27.94,1.565,2166339.043824701,42.1025655602079
+WH,Consumer Cyclical,Lodging,North America,7637352960,Small Cap,High Volatility,Growth,31.06962,1.55,99.11,67.67,1.324,759453.7848605578,77.38548442946963
+SBCF,Financial Services,Banks - Regional,North America,2587153664,Small Cap,High Volatility,Growth,22.029411,2.4,31.68,21.9,1.074,424493.625498008,25.38863515663907
+COF,Financial Services,Credit Services,North America,73253732352,Mid Cap,High Volatility,Value,18.11415,1.25,198.3,112.64,1.432,2602719.521912351,142.00186409513313
+FFIC,Financial Services,Banks - Regional,North America,516555072,Small Cap,Low Volatility,Growth,20.390804,4.96,18.59,10.74,0.768,173784.46215139443,13.74010648765412
+LMT,Industrials,Aerospace & Defense,North America,125488693248,Large Cap,Low Volatility,Value,19.153763,2.4899999999999998,618.95,413.92,0.481,1077877.2908366534,488.2769205161775
+UVV,Consumer Defensive,Tobacco,North America,1410446976,Small Cap,Low Volatility,Value,11.728952,5.6700002,67.8,45.19,0.761,205784.06374501993,51.31596046234982
+DMRC,Technology,Information Technology Services,North America,727001472,Small Cap,High Volatility,Unknown,,0.0,43.43,21.0,1.679,122257.76892430279,30.409960119847756
+ORA,Utilities,Utilities - Renewable,North America,4936092160,Small Cap,Low Volatility,Growth,41.642857,0.58999998,84.3,59.41,0.526,435250.99601593625,71.68261236973493
+SLM,Financial Services,Credit Services,North America,5813595136,Small Cap,High Volatility,Value,9.441379,1.9,28.22,15.64,1.171,1914360.5577689244,20.91881742515412
+IPG,Communication Services,Advertising Agencies,North America,11477002240,Mid Cap,High Volatility,Value,14.533019,4.279999999999999,35.17,26.88,1.09,3973117.928286853,30.670543039937417
+RRX,Industrials,Specialty Industrial Machinery,North America,11438255104,Mid Cap,High Volatility,Growth,54.655064,0.8099999999999999,185.28,122.49,1.031,457446.61354581674,156.6868522917607
+CYTK,Healthcare,Biotechnology,North America,6162679296,Small Cap,Low Volatility,Unknown,,0.0,110.25,32.5,0.783,2183630.677290837,60.78820708073468
+NEOG,Healthcare,Diagnostics & Research,North America,3072777728,Small Cap,High Volatility,Unknown,,0.0,20.89,11.46,1.223,1871759.362549801,15.803306815158798
+SNX,Technology,Electronics & Computer Distribution,North America,10190993408,Mid Cap,High Volatility,Value,15.433204,1.34000005,133.85,96.93,1.405,755265.3386454183,114.11852595720633
+NATL,Technology,Software—Application,North America,2378321408,Small Cap,Unknown,Unknown,,0.0,35.29,18.415,,603998.406374502,25.502191201624168
+BOOT,Consumer Cyclical,Apparel Retail,North America,4186239744,Small Cap,High Volatility,Growth,27.538153,0.0,169.83,68.37,2.161,778653.3864541833,114.72298811346411
+FNF,Financial Services,Insurance—Specialty,North America,17378811904,Mid Cap,High Volatility,Growth,23.050909,3.1600002000000003,64.83,44.8,1.404,1238990.8366533865,53.465059819924406
+INCR,Healthcare,Drug Manufacturers—Specialty & Generic,North America,61783288,Small Cap,Low Volatility,Unknown,,0.0,3.72,1.17,0.033,52674.501992031874,2.0094661356443426
+KRC,Real Estate,REIT—Office,North America,5012255744,Small Cap,High Volatility,Growth,24.868263,5.1999997,43.78,30.71,1.042,1080846.6135458166,36.335258856237644
+BJRI,Consumer Cyclical,Restaurants,North America,877066240,Small Cap,High Volatility,Growth,30.507936,0.0,38.87,27.61,2.107,375999.203187251,33.95131481976148
+MWA,Industrials,Specialty Industrial Machinery,North America,3912550144,Small Cap,High Volatility,Growth,33.837837,1.0699999999999998,26.28,13.4,1.335,1226522.7091633466,18.16494027171952
+BBSI,Industrials,Staffing & Employment Services,North America,1112956672,Small Cap,High Volatility,Growth,22.703703,0.75,43.82,27.055,1.386,138206.37450199205,32.91902399253085
+ADBE,Technology,Software—Infrastructure,North America,227112386560,Large Cap,High Volatility,Growth,43.685856,0.0,638.25,433.97,1.299,3166801.593625498,534.5103176162537
+IBTX,Financial Services,Banks—Regional,North America,2786990336,Small Cap,High Volatility,Unknown,,2.27,68.66,36.47,1.371,241409.16334661355,50.15976102608609
+HRL,Consumer Defensive,Packaged Foods,North America,17783445504,Mid Cap,Low Volatility,Growth,22.678322,3.58,36.86,28.51,0.254,2589411.155378486,32.11310748370045
+ESE,Technology,Scientific & Technical Instruments,North America,3826826240,Small Cap,High Volatility,Growth,37.76336,0.22999999999999998,154.0,96.69,1.081,124037.84860557769,113.31486082646951
+IVR,Real Estate,REIT—Mortgage,North America,507098016,Small Cap,High Volatility,Value,6.2781954,19.16,9.97,7.6,1.856,1163670.1195219124,8.87713149629266
+VIRT,Financial Services,Capital Markets,North America,5773535744,Small Cap,Low Volatility,Value,18.56219,2.5700000000000003,38.45,16.02,0.368,1217303.187250996,24.648585672872475
+FCN,Industrials,Consulting Services,North America,7322576384,Small Cap,Low Volatility,Growth,23.251436,0.0,243.6,185.93,0.114,186391.63346613545,212.02936253034736
+FDP,Consumer Defensive,Farm Products,North America,1628585984,Small Cap,Low Volatility,Growth,105.46875,2.96,35.27,21.23,0.399,248769.72111553786,26.18836655179818
+ALCO,Consumer Defensive,Farm Products,North America,204450224,Small Cap,Low Volatility,Value,7.859237,0.75,31.0,24.14,0.805,27017.131474103586,27.59804781119662
+CNX,Energy,Oil & Gas E&P,North America,6048461312,Small Cap,High Volatility,Value,13.198697,0.0,41.93,19.07,1.375,2680103.984063745,25.9251792041429
+HHS,Industrials,Conglomerates,North America,42567644,Small Cap,Low Volatility,Unknown,,0.0,8.87,5.49,0.637,24921.115537848607,7.423864545100239
+RWT,Real Estate,REIT—Mortgage,North America,950998336,Small Cap,High Volatility,Value,12.785714,9.5,8.15,5.46,1.63,1137847.8087649401,6.855059754800987
+QCRH,Financial Services,Banks—Regional,North America,1553794432,Small Cap,Low Volatility,Value,13.388082,0.26,96.08,50.3,0.938,62060.1593625498,65.15709160428598
+FFBC,Financial Services,Banks—Regional,North America,2836982528,Small Cap,Low Volatility,Value,12.728449,3.25,31.18,20.59,0.974,381092.4302788845,23.79824705997786
+LNTH,Healthcare,Drug Manufacturers—Specialty & Generic,North America,6276189184,Small Cap,Low Volatility,Value,14.828903,0.0,126.89,50.2,0.512,1080960.5577689244,81.8282070539862
+HEES,Industrials,Rental & Leasing Services,North America,2187135232,Small Cap,High Volatility,Value,15.1624365,1.8399999999999999,66.18,40.92,1.811,265837.45019920316,51.535537841310536
+GATX,Industrials,Rental & Leasing Services,North America,5834131456,Small Cap,Low Volatility,Growth,21.888,1.4099999,167.25,110.94,0.959,150414.34262948207,132.60015920813814
+INTU,Technology,Software—Application,North America,179631128576,Large Cap,High Volatility,Growth,62.485878,0.61000003,714.78,557.29,1.246,1359927.4900398406,630.2007964236802
+USPH,Healthcare,Medical Care Facilities,North America,1490782208,Small Cap,High Volatility,Growth,112.22727,1.78,113.63,76.18,1.389,93561.75298804781,94.41561743747666
+UIS,Technology,Information Technology Services,North America,563225216,Small Cap,Low Volatility,Unknown,,0.0,8.49,3.32,0.733,597894.422310757,5.588764940125059
+HLT,Consumer Cyclical,Lodging,North America,61783605248,Mid Cap,High Volatility,Growth,54.03838,0.23999999000000002,255.86,166.92,1.307,1551021.1155378486,209.98151412903076
+FCBC,Financial Services,Banks—Regional,North America,853087680,Small Cap,Low Volatility,Value,16.850365,2.69,49.02,31.0,0.514,34729.88047808765,37.877968039645616
+MTRN,Basic Materials,Other Industrial Metals & Mining,North America,2399265280,Small Cap,High Volatility,Growth,32.66102,0.47000000000000003,145.08,96.18,1.189,98043.82470119522,116.46402387884983
+KRNY,Financial Services,Banks—Regional,North America,512116704,Small Cap,Low Volatility,Unknown,,5.56,9.46,5.28,0.764,415306.374501992,6.798286850233952
+GRBK,Consumer Cyclical,Residential Construction,North America,3179841280,Small Cap,High Volatility,Value,9.268482,0.0,84.66,48.14,1.829,381605.577689243,62.37880477297354
+EXPD,Industrials,Integrated Freight & Logistics,North America,17026680832,Mid Cap,Low Volatility,Growth,23.7115,1.2,131.59,111.2,0.974,1221623.90438247,121.73649402633606
+CPAY,Technology,Software—Infrastructure,North America,26572437504,Mid Cap,High Volatility,Growth,27.168924,0.0,385.3,247.1,1.214,479362.1513944223,296.9619924233729
+EDR,Communication Services,Entertainment,North America,9359305728,Small Cap,Low Volatility,Unknown,,0.7900001,30.565,22.64,0.771,3337867.729083665,26.530916335573234
+SCVL,Consumer Cyclical,Apparel Retail,North America,917384064,Small Cap,High Volatility,Value,12.411764,1.6099999999999999,46.92,24.74,1.557,248955.77689243027,35.105418307847714
+LQDT,Consumer Cyclical,Internet Retail,North America,780713472,Small Cap,High Volatility,Growth,41.241936,0.0,25.85,13.99,1.394,129323.10756972112,19.814143446812118
+WM,Industrials,Waste Management,North America,91696054272,Mid Cap,Low Volatility,Growth,34.842747,1.3099999,230.39,171.15,0.747,1604778.0876494024,204.15167339674505
+OXY,Energy,Oil & Gas E&P,North America,47461388288,Mid Cap,High Volatility,Value,13.857534,1.7399999999999998,71.19,48.42,1.608,9542906.374501992,58.695059757308655
+NOC,Industrials,Aerospace & Defense,North America,71339556864,Mid Cap,Low Volatility,Growth,30.206663,1.68,555.57,418.6,0.346,844117.9282868525,477.32609576343066
+WING,Consumer Cyclical,Restaurants,North America,9677147136,Small Cap,High Volatility,Growth,96.13158,0.33000002,433.86,240.6,1.735,454671.71314741037,352.0365343435827
+ASGN,Technology,Information Technology Services,North America,4046510080,Small Cap,High Volatility,Growth,23.118687,0.0,106.42,83.71,1.4,304254.58167330676,94.59613569039273
+RTX,Industrials,Aerospace & Defense,North America,162158166016,Large Cap,Low Volatility,Growth,35.10951,2.07,128.7,79.67,0.54,6645425.498007968,104.55243023268255
+SLAB,Technology,Semiconductors,North America,3590371328,Small Cap,High Volatility,Unknown,,0.0,154.91,94.0,1.204,309680.4780876494,120.54151418009602
+NHC,Healthcare,Medical Care Facilities,North America,1933225728,Small Cap,Low Volatility,Value,15.669587,1.95,138.49,82.85,0.428,80484.46215139443,107.96784836362558
+FOXF,Consumer Cyclical,Auto Parts,North America,1353876864,Small Cap,High Volatility,Growth,124.92308,0.0,70.13,30.915,1.655,578371.3147410358,48.142350557790806
+FC,Consumer Defensive,Education & Training Services,North America,482940864,Small Cap,High Volatility,Growth,20.908047,0.0,44.96,33.75,1.242,72243.02788844622,39.30007969525706
+GLT,Basic Materials,Paper & Paper Products,North America,73672472,Small Cap,High Volatility,Unknown,,0.0,35.23,15.795,1.742,191338.94023904382,21.852430267637946
+SB,Industrials,Marine Shipping,North America,413230848,Small Cap,Unknown,Value,4.3,5.17,6.33,3.62,,680527.4900398407,4.797410360845436
+LXP,Real Estate,REIT—Industrial,North America,2782064640,Small Cap,Low Volatility,Growth,155.83334,5.609999999999999,10.57,8.23,0.894,2212598.8047808763,9.339561777760784
+CWT,Utilities,Utilities—Regulated Water,North America,3044438272,Small Cap,Low Volatility,Value,14.794797,2.19,56.25,43.5,0.489,319909.1633466135,50.20075690888788
+BRKR,Healthcare,Medical Devices,North America,8785103872,Small Cap,High Volatility,Growth,27.99517,0.34999999,94.86,48.07,1.204,1089449.0039840636,70.79167339431338
+TKO,Communication Services,Entertainment,North America,11215707136,Mid Cap,Unknown,Unknown,,0.0,139.45,72.33,,1062933.466135458,102.37207152833976
+D,Utilities,Utilities—Regulated Electric,North America,50148589568,Mid Cap,Low Volatility,Growth,21.678967,4.54,61.97,43.53,0.596,4543826.693227092,51.831155404626614
+RRTS,Industrials,Trucking,North America,65096400,Small Cap,High Volatility,Unknown,,0.0,1.77,0.97,3.854,4019.5219123505976,1.368565727989987
+BSX,Healthcare,Medical Devices,North America,133749792768,Large Cap,Low Volatility,Growth,74.92562,0.0,91.93,53.93,0.797,6042080.0796812745,73.44956170800198
+RM,Financial Services,Credit Services,North America,313433184,Small Cap,High Volatility,Value,12.881858,3.9300002000000003,34.15,20.5,1.529,25673.306772908367,27.708565784165582
+CMG,Consumer Cyclical,Restaurants,North America,84548780032,Mid Cap,High Volatility,Growth,56.96296,0.0,69.2614,44.0818,1.266,13211123.904382471,55.867319631386565
+AIZ,Financial Services,Insurance—Property & Casualty,North America,11647369216,Mid Cap,Low Volatility,Value,16.233025,1.4099999,230.55,160.12,0.568,358874.5019920319,180.57179321045894
+WEX,Technology,Software—Infrastructure,North America,7550871552,Small Cap,High Volatility,Growth,23.972046,0.0,244.04,165.51,1.574,352514.3426294821,198.95697222097937
+ACHC,Healthcare,Medical Care Facilities,North America,3834305792,Small Cap,High Volatility,Value,13.321312,0.0,87.77,36.5,1.334,982539.0438247012,70.02776906594812
+ORN,Industrials,Engineering & Construction,North America,341164768,Small Cap,Low Volatility,Unknown,,0.0,12.12,4.09,0.802,392938.6454183267,7.295139451425864
+FLO,Consumer Defensive,Packaged Foods,North America,4786889728,Small Cap,Low Volatility,Value,19.842106,4.24,26.12,21.2,0.361,1184601.593625498,22.863147477229752
+ROIV,Healthcare,Biotechnology,North America,9252244480,Small Cap,High Volatility,Value,2.2942238,0.0,13.055,9.48,1.243,5804010.3585657375,11.128446199029565
+AXL,Consumer Cyclical,Auto Parts,North America,787793024,Small Cap,High Volatility,Growth,28.73913,0.0,8.99,5.43,1.949,1659503.187250996,7.066175295537212
+MATW,Industrials,Conglomerates,North America,928786240,Small Cap,High Volatility,Unknown,,3.92,39.12,21.09,1.05,159063.34661354581,27.799641445813425
+FCX,Basic Materials,Copper,North America,63512309760,Mid Cap,High Volatility,Growth,32.028988,1.3599999999999999,55.24,36.04,1.91,12807904.38247012,45.13996017881598
+NNI,Financial Services,Credit Services,North America,3946694400,Small Cap,Low Volatility,Growth,34.79872,1.0299999,127.32,82.22,0.924,76091.23505976096,100.4262155175684
+HII,Industrials,Aerospace & Defense,North America,7801214464,Small Cap,Low Volatility,Value,11.188242,2.73,299.5,184.29,0.548,340119.5219123506,258.7686046585144
+EIX,Utilities,Utilities—Regulated Electric,North America,34208634880,Mid Cap,Low Volatility,Growth,25.657894,3.56,88.77,63.15,0.935,2048917.1314741035,75.52729083057419
+TAL,Consumer Defensive,Education & Training Services,North America,6248284160,Small Cap,Low Volatility,Growth,82.75001,0.0,15.52,7.35,0.033,7092754.183266932,11.1325896555684
+MKTX,Financial Services,Capital Markets,North America,9867600896,Small Cap,High Volatility,Growth,34.958107,1.1400000000000001,297.97,192.42,1.053,400007.171314741,238.02346631540246
+PLAY,Communication Services,Entertainment,North America,1545327104,Small Cap,High Volatility,Value,14.143885,0.0,69.82,29.31,2.138,1262519.920318725,45.84103584289551
+FF,Basic Materials,Specialty Chemicals,North America,228006272,Small Cap,Low Volatility,Value,6.3536587,4.61,8.36,4.15,0.527,435289.2430278885,5.736095622241259
+MTZ,Industrials,Engineering & Construction,North America,11453417472,Mid Cap,High Volatility,Growth,128.625,0.0,150.12,60.96,1.704,870179.6812749004,99.94079671912934
+STE,Healthcare,Medical Devices,North America,21622820864,Mid Cap,Low Volatility,Growth,36.75503,1.04,248.24,195.5,0.851,496403.5856573705,223.9979279658709
+THFF,Financial Services,Banks—Regional,North America,579906624,Small Cap,Low Volatility,Value,13.235772,3.6900000000000004,51.87,34.58,0.472,45971.71314741036,40.61776888418007
+CDE,Basic Materials,Gold,North America,2591073792,Small Cap,High Volatility,Unknown,,0.0,7.72,2.42,1.649,7858656.175298804,4.9694422317216125
+LPX,Industrials,Building Products & Equipment,North America,8302155264,Small Cap,High Volatility,Growth,20.309277,0.88,122.87,61.25,1.88,814866.5338645418,86.26223118086735
+KNF,Basic Materials,Building Materials,North America,5859414528,Small Cap,Unknown,Growth,29.487179,0.0,105.63,60.04,,390267.72908366536,77.06760958181434
+VSEC,Industrials,Aerospace & Defense,North America,2393476096,Small Cap,High Volatility,Growth,57.480392,0.33999999999999997,123.92,57.1,1.553,141510.75697211156,81.81764952215066
+CPK,Utilities,Utilities—Regulated Gas,North America,2987167744,Small Cap,Low Volatility,Growth,26.832994,1.94,134.2,98.22,0.621,119768.52589641434,111.09713146316103
+SEM,Healthcare,Medical Care Facilities,North America,2723042304,Small Cap,High Volatility,Value,9.864486,2.3699999,22.07974,12.403017,1.418,1144129.111553785,17.0338404834033
+JNJ,Healthcare,Drug Manufacturers—General,North America,374144532480,Large Cap,Low Volatility,Growth,25.621487,3.2,168.85,143.13,0.518,7071678.4860557765,156.2847811634322
+IFF,Basic Materials,Specialty Chemicals,North America,23359107072,Mid Cap,High Volatility,Unknown,,1.7500000000000002,106.77,72.94,1.238,1668767.330677291,90.89621500569986
+SGA,Communication Services,Broadcasting,North America,81273968,Small Cap,Low Volatility,Value,16.866667,7.91,27.0,11.71,0.322,18004.780876494024,18.586175325857216
+LXRX,Healthcare,Biotechnology,North America,290965120,Small Cap,High Volatility,Unknown,,0.0,3.73,0.73,1.244,3381156.573705179,1.7763745034358416
+UTMD,Healthcare,Medical Instruments & Supplies,North America,221303200,Small Cap,Low Volatility,Value,15.245326,1.87,87.0,63.38,0.08,21284.860557768923,70.51513937839948
+PHM,Consumer Cyclical,Residential Construction,North America,27999809536,Mid Cap,High Volatility,Value,9.983026,0.64999997,149.47,89.81,1.641,1853599.203187251,118.06370504918802
+SPG,Real Estate,REIT—Retail,North America,68993212416,Mid Cap,High Volatility,Growth,24.382471,4.58,186.0,127.6,1.768,1462576.4940239044,154.01031913605345
+GHC,Consumer Defensive,Education & Training Services,North America,4058752000,Small Cap,High Volatility,Value,18.182386,0.74,972.13,628.5,1.114,15381.274900398406,751.1609961521103
+MRC,Energy,Oil & Gas Equipment & Services,North America,1190844672,Small Cap,High Volatility,Value,16.057472,0.0,14.91,9.77,1.979,574728.6852589642,12.267968139800418
+HOFT,Consumer Cyclical,"Furnishings, Fixtures & Appliances",North America,200667600,Small Cap,High Volatility,Growth,133.7857,4.9099997,27.15,13.09,1.205,34791.235059760955,19.033187197499068
+PCTY,Technology,Software—Application,North America,11699568640,Mid Cap,Low Volatility,Growth,61.767857,0.0,215.68,129.94,0.931,497907.96812749,162.48707179339283
+ORLY,Consumer Cyclical,Specialty Retail,North America,71771955200,Mid Cap,Low Volatility,Growth,30.77277,0.0,1255.3,914.5,0.92,374692.03187251,1077.8065766718282
+ADSK,Technology,Software—Application,North America,62907072512,Mid Cap,High Volatility,Growth,58.147408,0.0,326.62,195.32,1.474,1584892.4302788845,250.8396816177672
+VECO,Technology,Semiconductor Equipment & Materials,North America,1582408448,Small Cap,High Volatility,Growth,20.05036,0.0,49.25,25.52,1.169,633335.4581673307,35.022191195848926
+FARO,Technology,Scientific & Technical Instruments,North America,496957120,Small Cap,High Volatility,Unknown,,0.0,28.04,13.52,1.259,180413.54581673307,19.482509924596048
+TRC,Industrials,Conglomerates,North America,432383552,Small Cap,Low Volatility,Unknown,,0.0,19.82,14.8,0.594,74252.19123505976,16.78183271780432
+NFBK,Financial Services,Banks—Regional,North America,576201664,Small Cap,Low Volatility,Growth,20.90625,3.8900003,14.39,6.98,0.732,271141.0358565737,10.849999976823055
+TECH,Healthcare,Biotechnology,North America,11977266176,Mid Cap,High Volatility,Growth,79.32632,0.42,85.57,61.16,1.278,1032643.8247011952,73.31992014850753
+PFGC,Consumer Defensive,Food Distribution,North America,13748232192,Mid Cap,High Volatility,Growth,32.560883,0.0,89.73,61.6,1.446,1018334.2629482072,72.83804796986371
+EGRX,Healthcare,Drug Manufacturers—Specialty & Generic,North America,12439872,Small Cap,Low Volatility,Value,1.1294117,0.0,6.81,0.003,0.62,190200.3984063745,4.2154143561879955
+GLPI,Real Estate,REIT—Specialty,North America,14175047680,Mid Cap,Low Volatility,Value,18.045456,5.89,52.595,41.8,0.999,1349619.5219123506,47.36390433748405
+MTH,Consumer Cyclical,Residential Construction,North America,6912836608,Small Cap,High Volatility,Value,8.641791,1.5700001000000001,213.98,146.04,1.822,411294.0239043825,175.23215116827612
+FET,Energy,Oil & Gas Equipment & Services,North America,187326432,Small Cap,High Volatility,Unknown,,0.0,23.82,12.83,2.47,43306.77290836653,17.99466137677075
+ALGM,Technology,Semiconductors,North America,3997972224,Small Cap,High Volatility,Unknown,,0.0,33.26,18.59,1.688,1895309.1633466135,26.515438269808946
+L,Financial Services,Insurance—Property & Casualty,North America,18853021696,Mid Cap,Low Volatility,Value,11.533245,0.29,87.45,67.2,0.818,730262.1513944223,76.4555378644115
+SCL,Basic Materials,Specialty Chemicals,North America,1729842432,Small Cap,Low Volatility,Growth,38.45,2.0,96.68,69.78,0.805,98670.91633466135,83.5840238593964
+AHH,Real Estate,REIT—Diversified,North America,1124083328,Small Cap,High Volatility,Unknown,,7.4200004,13.11,10.02,1.056,476868.52589641436,11.343466139409646
+ANTH,Healthcare,Biotechnology,North America,617832,Small Cap,Low Volatility,Unknown,,0.0,0.0002,0.0001,-123.117,1001.6294820717131,0.00010039840383822491
+SANM,Technology,Electronic Components,North America,4282391040,Small Cap,Low Volatility,Growth,20.309464,0.0,86.05,48.83,0.892,422194.0239043825,64.30258973566184
+FSP,Real Estate,REIT—Office,North America,197812960,Small Cap,Low Volatility,Unknown,,2.09,2.72,1.47,0.791,589315.5378486055,1.9836254965261635
+FTNT,Technology,Software—Infrastructure,North America,72851357696,Mid Cap,Low Volatility,Growth,47.76382,0.0,100.59,50.65,0.995,5533398.007968128,68.23294837921264
+SNPS,Technology,Software—Infrastructure,North America,85791883264,Mid Cap,High Volatility,Growth,57.457817,0.0,629.38,457.52,1.076,1052858.9641434264,546.0533880104582
+MGRC,Industrials,Rental & Leasing Services,North America,2991563776,Small Cap,Low Volatility,Value,13.31694,1.5599999999999998,130.86,95.5,0.731,231763.74501992032,112.42593617838217
+VLO,Energy,Oil & Gas Refining & Marketing,North America,44030640128,Mid Cap,High Volatility,Value,12.221441,3.08,184.79,120.21,1.374,2959741.832669323,146.04605543280977
+HTBK,Financial Services,Banks—Regional,North America,653494272,Small Cap,Low Volatility,Value,14.9577465,4.9000002,11.27,7.66,0.913,389024.3027888446,9.13832670188995
+AGCO,Industrials,Farm & Heavy Construction Machinery,North America,7573513216,Small Cap,High Volatility,Growth,44.783184,1.15,130.26,84.35,1.249,778599.203187251,106.14215139563815
+BHE,Technology,Electronic Components,North America,1745489792,Small Cap,Low Volatility,Growth,28.19186,1.39999995,52.57,24.93,0.982,294550.59760956175,36.89908356685562
+SJW,Utilities,Utilities—Regulated Water,North America,1852885120,Small Cap,Low Volatility,Growth,20.115524,2.87,70.43,51.17,0.621,188227.09163346613,58.11258971073713
+EVTC,Technology,Software—Infrastructure,North America,2290107648,Small Cap,High Volatility,Growth,28.125,0.5599999999999999,42.21,28.76,1.156,389809.9601593625,36.166294804607254
+ABG,Consumer Cyclical,Auto & Truck Dealerships,North America,5093317120,Small Cap,High Volatility,Value,14.580808,0.0,277.13,195.09,1.165,182787.25099601594,227.66035807940114
+PWR,Industrials,Engineering & Construction,North America,50855284736,Mid Cap,High Volatility,Growth,63.68207,0.11999999,350.19,187.16,1.009,904039.4422310757,258.58422371305795
+MOD,Consumer Cyclical,Auto Parts,North America,7129395712,Small Cap,High Volatility,Growth,44.667763,0.0,146.84,50.59,2.246,823484.4621513945,97.686892247295
+MORN,Financial Services,Financial Data & Stock Exchanges,North America,15251752960,Mid Cap,High Volatility,Growth,46.721634,0.45999999999999996,359.5,269.51,1.182,122913.54581673307,303.89434255166833
+GM,Consumer Cyclical,Auto Manufacturers,North America,61126762496,Mid Cap,High Volatility,Value,5.932764,0.86,61.24,32.6,1.414,15396935.059760956,44.2733465855815
+WFC,Financial Services,Banks—Diversified,North America,257069924352,Large Cap,High Volatility,Value,15.835758,2.1,78.13,44.41,1.136,18197223.10756972,57.18115524656744
+CNOB,Financial Services,Banks—Regional,North America,1064775232,Small Cap,High Volatility,Value,15.895953,2.6199998,29.31,17.07,1.237,184434.66135458168,21.916892412649208
+FR,Real Estate,REIT—Industrial,North America,7354345472,Small Cap,High Volatility,Growth,23.038794,2.77,57.35,45.1,1.093,1092033.8645418326,51.91681277514454
+ADXS,Healthcare,Biotechnology,North America,1150038,Small Cap,Unknown,Unknown,,0.0,1.49,0.0012,,10109.96812749004,0.3584753398410605
+SIGI,Financial Services,Insurance—Property & Casualty,North America,6206459392,Small Cap,Low Volatility,Growth,27.443546,1.49,109.58,81.0,0.565,356074.1035856574,97.06629481828546
+FRO,Energy,Oil & Gas Midstream,North America,3735606016,Small Cap,Low Volatility,Value,6.5772357,13.719999999999999,29.39,16.099,0.107,1966518.7250996016,23.02294823088019
+MSA,Industrials,Security & Protection Services,North America,6852511232,Small Cap,Low Volatility,Growth,25.117052,1.17,200.61,160.02,0.989,153898.8047808765,178.60119507322273
+CNP,Utilities,Utilities—Regulated Electric,North America,21285398528,Mid Cap,Low Volatility,Growth,21.746666,2.5799999000000002,32.86,25.41,0.917,5250262.151394422,28.830876475786308
+OSUR,Healthcare,Medical Instruments & Supplies,North America,286441728,Small Cap,Low Volatility,Growth,25.333332,0.0,8.45,3.72,0.046,885791.6334661355,5.442390455192779
+LCUT,Consumer Cyclical,"Furnishings, Fixtures & Appliances",North America,130502960,Small Cap,High Volatility,Unknown,,2.8900001,11.68,5.25,1.26,73556.57370517928,8.050398408654202
+IDXX,Healthcare,Diagnostics & Research,North America,34535673856,Mid Cap,High Volatility,Growth,40.63102,0.0,583.39,398.5,1.357,507527.49003984063,501.8956174812469
