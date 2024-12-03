@@ -13,11 +13,12 @@ options(repos = c(CRAN = "https://cloud.r-project.org"))
 For this project I created my own dataset. I used the Yahoo Finance API and Python to scrape the S&P 500 company list, the Russell 2000, and the the S&P 400 to get a mix of small, mid, and large cap stocks. I then selected 1000 companies at random from this aggregated list. I then used the Yahoo API and Finnhub to get the financial data for the companies and put it into a CSV. Github Link to process: . 
 
 
-The objective of this project is to develop a predictive model that estimates the Recent Close Price of stocks based on various market and financial variables. I hope to answer the following questions.
+The objective of this project is to develop a predictive model that estimates the Recent Close Price of stocks based on various market and financial variables. I hope to answer the following questions.\\
   1. What are the most significant predictors of stock prices?
+  
   2. How do market variables interact to influence stock prices? I want to see which variables have interaction effects.
-  3. Can we predict stock price trends accurately? I want to see if we can get a good R^2 value that means we can use historical data 
-  values to predict current prices.
+  
+  3. Can we predict stock price trends accurately? I want to see if we can get a good R^2 value which means we can use historical data values to predict current prices.
   
 By developing and validating this model, the goal is to generate insights into the economic drivers of stock prices, which can potentially inform investment strategies or financial decision-making.
 
@@ -44,7 +45,7 @@ Free Cash Flow: Quantitative var comparing a company's market value to its book 
 Analyst Ratings: Categorical Variable that I got from finnhub API based on ratings from analysts
 Insider Transactions: Categorical Variable (finnhub API) that indicated insider transactions
 ## R Libraries and Helper Functions
-```{r libraries}
+```{r libraries, echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(ggplot2)
 library(tidyr)

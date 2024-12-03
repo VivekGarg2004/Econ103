@@ -143,26 +143,29 @@ helper.density_plot <- function(data, variable_name, color) {
          x = variable_name, y = "Density")
 }
 
-helper.univariate_quantitative <- function(data, var) {
-  # summary Statistics
-  summary_stats <- summary(data[[var]])
-  print(summary_stats)
-  
-  # histogram
-  print(helper.plot_histograms(data = data, variable_name = var))
-  
-  # density plot with fitted curve
-  print(helper.density_plot(data, var, "green"))
-}
+helper.detect_nonlinearities <- function(data, target_var, var, sample_size = 10000, noise_level = 0.05, noise_level_bool = TRUE) {
+  if (nrow(data) > sample_size) {
+    data <- data %>% sample_n(sample_size)
+  }
 
-helper.detect_nonlinearities <- function(data, target_var, var) {
-  # Scatter Plot with Smoothing
+  # Add noise to the target variable
+  if (noise_level_bool){
+    data[[target_var]] <- data[[target_var]] + rnorm(nrow(data), mean = 0, sd = sd(data[[target_var]]) * 
+                                                       noise_level)
+  }
+
+  # Fit linear regression model
+  model <- lm(as.formula(paste(target_var, "~", var)), data = data)
+
+  # Calculate R-squared
+  r_squared <- summary(model)$r.squared
+
   ggplot(data, aes_string(x = var, y = target_var)) +
-    geom_point(alpha = 0.5) +
-    geom_smooth(method = "loess", color = "red") +
-    theme_minimal() +
-    labs(title = paste("Scatter Plot of", target_var, "vs", var), x = var, y = target_var) %>%
-    print()
+    geom_point(alpha = 0.5, position = position_jitter(width = 0.1, height = 0)) +  # Add jitter for separation
+    geom_smooth(method = "lm", color = "red") +
+    labs(title = paste("Scatter Plot of", target_var, "vs", var, "\nR-squared:", round(r_squared, 4)),
+         x = var, y = target_var) +
+    theme_minimal()
 }
 
 
@@ -199,27 +202,28 @@ helper.plot_histograms( data = garment_worker, color = "green", variable_name = 
 ```
 ```{r Boruta}
 set.seed(123)
-boruta_result <- Boruta(actual_productivity ~ ., data = garment_worker, doTrace = 2)
+boruta_result_2 <- Boruta(actual_productivity ~ ., data = garment_worker, doTrace = 2)
 
-plot(boruta_result, xlab = "", xaxt = "n", main = "Variable Importance via Boruta")
-lz<-lapply(1:ncol(boruta_result$ImpHistory),function(i)
-boruta_result$ImpHistory[is.finite(boruta_result$ImpHistory[,i]),i])
-names(lz) <- colnames(boruta_result$ImpHistory)
+plot(boruta_result_2, xlab = "", xaxt = "n", main = "Variable Importance via Boruta")
+lz<-lapply(1:ncol(boruta_result_2$ImpHistory),function(i)
+boruta_result_2$ImpHistory[is.finite(boruta_result_2$ImpHistory[,i]),i])
+names(lz) <- colnames(boruta_result_2$ImpHistory)
 Labels <- sort(sapply(lz,median))
 axis(side = 1,las=2,labels = names(Labels),
-at = 1:ncol(boruta_result$ImpHistory), cex.axis = 0.7)
+at = 1:ncol(boruta_result_2$ImpHistory), cex.axis = 0.7)
 
 
 # Get the finalized list of important variables
-important_vars <- getSelectedAttributes(boruta_result, withTentative = TRUE)
-importance_scores <- attStats(boruta_result)
+important_vars <- getSelectedAttributes(boruta_result_2, withTentative = TRUE)
+importance_scores <- attStats(boruta_result_2)
 print(importance_scores)
 
 # Sort predictors by mean importance
 sorted_scores <- importance_scores[order(-importance_scores$meanImp), ]
-
+print(sorted_scores)
 # Select the top 5-6 Quantitative predictors
-top_5_vars <- rownames(sorted_scores)[1:5]
+top_5_vars_2 <- rownames(sorted_scores)[1:5]
+print(top_5_vars_2)
 
 
 
@@ -244,13 +248,52 @@ helper.eda_factor(garment_worker, "style_change_binary", "actual_productivity", 
 Unfortunately from the ANOVA tests it looks like all factor variables demonstrate importance and it appears that none of them differentiated themselves through the box plots or summaries. This then leads us to rely on our economic intuition and human input. *yes we could do a chi-square test but I do not think that it would lead to any different analysis, and also pretty sure that we were not taught this*. For further analysis I will rely on the results from the Boruta test along with the ANOVA test. I think that the three most important factor variables are team, quarter, and department. The first two spots were pretty well solidified as their results were very high in the Boruta test and they passed the ANOVA test. The last spot came down to `department` versus `style_change_binary`. At first I looked at the Boruta test between `department` and `no_of_style_change`, but these were largely equal. Then I moved onto the EDA of the factor variables. Although `style_change_binary` had a lower p-value from the ANOVA test and had a greater difference between means, I think the imbalance between categories was not ideal for me. Additionally, the department category carries an implicit weight from the `wip` category due to how we handled `NULL` values. Moreover the `incentive` column is 0 for all `department` finishing leading for me to believe that department is also carrying an implicit weight from this column. This was a tough decision and I do not think there is a wrong answer for this.
 
 ```{r Univariate Analysis of Quantitative Variables}
-for (var in top_5_vars){
+for (var in top_5_vars_2){
   print(paste("Descriptive Analysis for",  var))
   helper.univariate_quantitative(data = garment_worker, var = var)
-  print(helper.detect_nonlinearities(data = garment_worker, var = var, target_var = "actual_productivity"))
+  print(helper.detect_nonlinearities(data = garment_worker, var = var, noise_level_bool = TRUE, target_var = "actual_productivity"))
 }
 
 
+
+
+helper.build_mlr <- function(data, dependent_var, numeric_vars, factor_vars) {
+  # Convert factor variables to factors if they aren't already
+  for(var in factor_vars) {
+    data[[var]] <- as.factor(data[[var]])
+  }
+  
+  # Combine all predictor variables
+  all_predictors <- c(numeric_vars, factor_vars)
+  
+  # Create formula for model
+  formula_str <- paste(dependent_var, "~", paste(all_predictors, collapse = " + "))
+  
+  # Fit the model
+  model <- lm(as.formula(formula_str), data = data)
+  
+  # Get R-squared
+  r_squared <- summary(model)$r.squared
+  adj_r_squared <- summary(model)$adj.r.squared
+  
+  # Print results
+  cat("\nMultiple Linear Regression Results:\n")
+  cat("Numeric predictors:", paste(numeric_vars, collapse = ", "), "\n")
+  cat("Factor predictors:", paste(factor_vars, collapse = ", "), "\n")
+  cat("R-squared:", round(r_squared, 4), "\n")
+  cat("Adjusted R-squared:", round(adj_r_squared, 4), "\n\n")
+  
+  # Print full summary
+  print(summary(model))
+  
+  return(model)
+}
+
+# Example usage:
+dependent_var <- "actual_productivity"
+numeric_vars <- top_5_vars_2
+factor_vars <- c("team", "department", "quarter")
+model <- helper.build_mlr(garment_worker, dependent_var, numeric_vars, factor_vars)
 
 ```
 
@@ -357,7 +400,7 @@ corrplot(cor_matrix, method = "color", type = "upper", order = "hclust",
 ```{r Boruta for cleaned Data}
 set.seed(123)
 #we will use dplyr's slice_sample to get random 10,000 instances because this is more than enough instances to run Boruta on and I want results quicker
-sampled_data <- rideshare_kaggle_2 %>% slice_sample(n =10000)
+sampled_data <- rideshare_kaggle_2 %>% slice_sample(n =5000)
 # for some reason R is single threaded for BORUTA so we will set up threading manually because i am not waiting 6 hrs for boruta analysis 
 cl <- makeCluster(detectCores() - 1) # Use all but one core
 registerDoParallel(cl)
@@ -401,7 +444,18 @@ print(top_5_vars)
 for (var in top_5_vars){
   print(paste("Descriptive Analysis for",  var))
   helper.univariate_quantitative(data = rideshare_kaggle_2, var = var)
-  print(helper.detect_nonlinearities(data = rideshare_kaggle_2, var = var, target_var = "price"))
+  print(helper.detect_nonlinearities(data = rideshare_kaggle_2, var = var, noise_level_bool = FALSE, target_var = "price"))
 }
-helper.univar
+
+rideshare_kaggle_2$auto_bins <- NULL
+ggplot(rideshare_kaggle_2, aes(x = apparentTemperature, y = price, color = auto_bins)) +
+  geom_point() +
+  facet_wrap(~ auto_bins) +
+  labs(
+    title = "Scatter Plot with Faceting and Coloring",
+    x = "Dewpoint", y = "Price"
+  ) +
+  theme_minimal()
+
+
 ```
